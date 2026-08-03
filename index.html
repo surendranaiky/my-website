@@ -8,17 +8,51 @@
 </head>
 <body>
     <header>
-        <h1>Dr. Surendranaik Y</h1>
-        <p>Assistant Professor</p>
-        <p>Department of Chemistry</p>
-        <p>MVJ College of Engineering, Channasandra Main Road, near ITPB, Whitefield, Bengaluru, Karnataka, 560067</p>
+        <div class="slider" id="headerSlider">
+            <div class="slide active">
+                <img src="banner1.jpg" alt="Banner 1">
+            </div>
+            <div class="slide">
+                <img src="banner2.jpg" alt="Banner 2">
+            </div>
+            <div class="slide">
+                <img src="banner3.jpg" alt="Banner 3">
+            </div>
+            <div class="slide">
+                <img src="banner4.jpg" alt="Banner 4">
+            </div>
+            <div class="slide">
+                <img src="banner5.jpg" alt="Banner 5">
+            </div>
+            <div class="slide">
+                <img src="banner6.jpg" alt="Banner 6">
+            </div>
+            <button class="slider-arrow prev" onclick="changeSlide(-1)" aria-label="Previous slide">&#10094;</button>
+            <button class="slider-arrow next" onclick="changeSlide(1)" aria-label="Next slide">&#10095;</button>
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+
+        <div class="header-content">
+            <div class="profile-frame">
+                <img src="profile.jpg" alt="Dr. Surendranaik Y" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="profile-fallback">SY</div>
+            </div>
+            <div class="header-text">
+                <h1>Dr. Surendranaik Y</h1>
+                <p>Assistant Professor</p>
+                <p>Department of Chemistry</p>
+                <p>MVJ College of Engineering, Channasandra Main Road, near ITPB, Whitefield, Bengaluru, Karnataka, 560067</p>
+            </div>
+        </div>
+
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#research">Research</a></li>
                 <li><a href="#qualifications">Qualifications</a></li>
                 <li><a href="#publications">Publications</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#patents">Patents</a></li>
+                <li><a href="#conferences">Conferences</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -53,64 +87,152 @@
         </section>
 
         <section id="publications">
-            <h2>Selected Publications</h2>
+            <h2>Publications</h2>
+
             <div class="publication">
-                <h3>Synthesis, Characterization, and Optical Properties of Novel Heterocyclic Azo Dyes</h3>
-                <p>ChemistrySelect, 2024</p>
-                <p>Evaluated antioxidant activity as an active sunscreen agent.</p>
+                <h3><a href="https://doi.org/10.1016/J.MOLSTRUC.2026.145316" target="_blank">Hybrid triazole azo dyes as bioactive compounds: Synthesis, characterization, electrochemical analysis, DFT studies, docking, and live cell imaging investigations</a></h3>
+                <p><a href="https://doi.org/10.1016/J.MOLSTRUC.2026.145316" target="_blank">Journal of Molecular Structure</a>, Apr 2026</p>
+                <p>Authors: Mallikarjuna, B.; Chavan, Prabhakar ... Surendranaik, Y.</p>
             </div>
+
             <div class="publication">
-                <h3>4-Methyl Coumarin Fused Azo Dyes: Solvatochromic and Electrochemical Studies</h3>
-                <p>Structural Chemistry, 2025</p>
-                <p>Investigated NLO material properties and biological studies.</p>
+                <h3><a href="https://doi.org/10.1016/J.MOLSTRUC.2025.144171" target="_blank">Domino C-C/C-N bond-forming strategy for convergent regioselective synthesis of fused pyrimidines using Zn(L-Proline)2: Integrative bioactivity, LFPs imaging and computational modeling</a></h3>
+                <p><a href="https://doi.org/10.1016/J.MOLSTRUC.2025.144171" target="_blank">Journal of Molecular Structure</a>, Feb 2026</p>
+                <p>Authors: Mandara, A. M.; Chavan, Prabhakar ... Yadav, Ganapati Pakkirappa, Surendranaik Y</p>
             </div>
+
             <div class="publication">
-                <h3>Red-emitting Coumarin-Barbituric Acid for Catechol Detection</h3>
-                <p>Luminescence, 2024</p>
-                <p>Developed electrochemical sensor and latent fingerprint probe.</p>
+                <h3><a href="https://doi.org/10.1016/J.MOLSTRUC.2025.143954" target="_blank">Synthesis and characterization of substituted 3-((4-methyl-2-oxo-2H-chromen-7-yl)imino)indolin-2-one derivatives as photosensitizers for solar cell application and their NLO properties</a></h3>
+                <p><a href="https://doi.org/10.1016/J.MOLSTRUC.2025.143954" target="_blank">Journal of Molecular Structure</a>, Jan 2026</p>
+                <p>Authors: Surendranaik, Y.; Venkatesh, Talavara ... Manjunatha, L. S.</p>
             </div>
+
             <div class="publication">
-                <h3>Coumarin Incorporated Azo Compounds: Biological Evaluation</h3>
-                <p>Journal of Molecular Structure, 2025</p>
-                <p>Explored biological activity of novel heterocyclic compounds.</p>
+                <h3><a href="https://doi.org/10.1080/00958972.2026.2626033" target="_blank">Benzoxazole-isatin-based metal complexes as potential anti-tuberculosis agents: synthesis, characterization, in vitro evaluation, and computational modeling</a></h3>
+                <p><a href="https://doi.org/10.1080/00958972.2026.2626033" target="_blank">Journal of Coordination Chemistry</a>, 2026</p>
+                <p>Authors: Pooja, T. Kumari; Yuvaraj, T. C. M. ... Naik, Y. Surendra</p>
             </div>
+
+            <div class="pub-extra" id="pubExtra">
             <div class="publication">
-                <h3>Anti-TB Activity of Coumarin-Imidazole Derivatives</h3>
-                <p>Journal of Molecular Structure, 2025</p>
-                <p>Studied biological activity supported by DFT analysis.</p>
+                <h3><a href="https://doi.org/10.1016/J.MOLSTRUC.2025.143360" target="_blank">Synthesis, characterization and biological evaluation of coumarin incorporated azo compounds</a></h3>
+                <p><a href="https://doi.org/10.1016/J.MOLSTRUC.2025.143360" target="_blank">Journal of Molecular Structure</a>, Dec 2025</p>
+                <p>Authors: Karunasagar, K. O.; Bodke, Yadav D. ... Vinay, K. K.; Surendranaik, Y.</p>
             </div>
+
             <div class="publication">
-                <h3>Thiadiazole-Based Azo Dye: Electrochemical Sensing and Anticancer Activity</h3>
-                <p>Journal of Molecular Structure, 2025</p>
-                <p>Combined synthesis, docking, and biological evaluation.</p>
+                <h3><a href="https://doi.org/10.1016/J.JICS.2025.102106" target="_blank">L-Proline driven Knoevenagel condensation for assembling benzimidazole-pyrazole-coumarin frameworks; mechanistic, biological and electrochemical lead sensor applications</a></h3>
+                <p><a href="https://doi.org/10.1016/J.JICS.2025.102106" target="_blank">Journal of the Indian Chemical Society</a>, Nov 2025</p>
+                <p>Authors: Mandara, A. M.; Chavan, Prabhakar ... Surendranaik, Y.</p>
             </div>
+
             <div class="publication">
-                <h3>CeO₂ Catalyzed Trisubstituted Imidazoles for NLO Applications</h3>
-                <p>Letters in Organic Chemistry, 2025</p>
-                <p>Green synthesis approach with computational validation.</p>
+                <h3><a href="https://doi.org/10.1016/J.MOLSTRUC.2025.142802" target="_blank">Synthesis, characterization and geometrical optimization of azo dyes derived from the substituted pyrazole and benzothiazole amines coupled with 3-N,N-diethyl amino phenol</a></h3>
+                <p><a href="https://doi.org/10.1016/J.MOLSTRUC.2025.142802" target="_blank">Journal of Molecular Structure</a>, Oct 2025</p>
+                <p>Authors: Shakuntala, R. B.; Keshavayya, J. ... Pushpavathi, Itte; Surendranaik, Y.</p>
             </div>
+
             <div class="publication">
-                <h3>Isoxazolone-Coupled Azo Moieties: Photophysical Interactions</h3>
-                <p>Russian Journal of Bioorganic Chemistry, 2025</p>
-                <p>Explored photophysical and biological properties.</p>
+                <h3><a href="https://doi.org/10.1016/J.MOLSTRUC.2025.142576" target="_blank">Synthesis, Characterization, Electrochemical Sensing, DFT Analysis, Molecular Docking and Anticancer Activity of a Novel Thiadiazole-Based Azo Dye Incorporating a Barbituric Acid Scaffold</a></h3>
+                <p><a href="https://doi.org/10.1016/J.MOLSTRUC.2025.142576" target="_blank">Journal of Molecular Structure</a>, Oct 2025</p>
+                <p>Authors: Harisha, S.; Nagaraj, Kalyan ... Surendranaik, Y.</p>
             </div>
+
             <div class="publication">
-                <h3>Patent: Novel Coumarin-Imidazole Derivatives as Anti-TB Agents</h3>
-                <p>Indian Patent Application No. 202541004838, 2025</p>
-                <p>Filed for innovative heterocyclic compounds with therapeutic potential.</p>
+                <h3><a href="https://doi.org/10.1002/SLCT.202501285" target="_blank">Synthesis, Solvatochromic, LFPs, Computational, and Electrochemical Investigation of Novel Sulfadiazine Azo Dyes and Their Biological Studies</a></h3>
+                <p><a href="https://doi.org/10.1002/SLCT.202501285" target="_blank">ChemistrySelect</a>, Aug 2025</p>
+                <p>Authors: Pavithra; Pushpavathi, Itte ... Naik, Y. Surendra</p>
             </div>
+
+            <div class="publication">
+                <h3><a href="https://doi.org/10.2174/0115701786362014250102043411" target="_blank">Facile CeO₂ Nanoparticles Catalysed the Synthesis of a Series of 2,4,5-Trisubstituted Imidazole Derivatives and their DFT Studies for NLO Application</a></h3>
+                <p><a href="https://doi.org/10.2174/0115701786362014250102043411" target="_blank">Letters in Organic Chemistry</a>, Aug 2025</p>
+                <p>Authors: Yashyanaik, Surendranaik; Venkatesh, Talavara; M.e., Jayachandu</p>
+            </div>
+
+            <div class="publication">
+                <h3><a href="https://doi.org/10.1134/S1068162024605962" target="_blank">Synthesis, Biological, and Computational Studies of Novel Isoxazolone-Coupled Azo Moieties and Their Photophysical Interactions</a></h3>
+                <p><a href="https://doi.org/10.1134/S1068162024605962" target="_blank">Russian Journal of Bioorganic Chemistry</a>, Jun 2025</p>
+                <p>Authors: Karunasagar, K. O.; Bodke, Yadav D. ... Surendranaik, Y.</p>
+            </div>
+
+            <div class="publication">
+                <h3><a href="https://doi.org/10.1016/J.MOLSTRUC.2024.140111" target="_blank">Synthesis and evaluation of the anti-TB activity of novel 7-(2-(4-substitutedphenyl)-4,5-diphenyl-1H-imidazol-1-yl)-4-methyl-2H-chromen-2-one derivatives and their DFT studies for NLO application</a></h3>
+                <p><a href="https://doi.org/10.1016/J.MOLSTRUC.2024.140111" target="_blank">Journal of Molecular Structure</a>, Feb 2025</p>
+                <p>Authors: Surendranaik, Y.; Venkatesh, Talavara</p>
+            </div>
+
+            <div class="publication">
+                <h3><a href="https://doi.org/10.1007/S11224-024-02359-5" target="_blank">Synthesis, characterization, solvatochromic, and electrochemical investigation of novel 4-methyl coumarin fused azo dyes as an NLO material and their biological studies</a></h3>
+                <p><a href="https://doi.org/10.1007/S11224-024-02359-5" target="_blank">Structural Chemistry</a>, Feb 2025</p>
+                <p>Authors: Surendranaik, Y.; Venkatesh, Talavara; Naik, Eresha</p>
+            </div>
+
+            <div class="publication">
+                <h3><a href="https://doi.org/10.1002/SLCT.202402411" target="_blank">Synthesis, Characterization, and Optical Properties of Novel Heterocyclic Azo Dyes and Evaluation of Their Antioxidant Activity as an Active Sunscreen Agent</a></h3>
+                <p><a href="https://doi.org/10.1002/SLCT.202402411" target="_blank">ChemistrySelect</a>, Sep 2024</p>
+                <p>Authors: Surendranaik, Y.; Venkatesh, Talavara ... Chethan</p>
+            </div>
+
+            <div class="publication">
+                <h3><a href="https://doi.org/10.1002/BIO.4825" target="_blank">Red-emitting 4-methyl coumarin fused barbituric acid as an electrochemical sensor for catechol detection and probe for latent fingerprints</a></h3>
+                <p><a href="https://doi.org/10.1002/BIO.4825" target="_blank">Luminescence: the Journal of Biological and Chemical Luminescence</a>, Jul 2024</p>
+                <p>Authors: Yashyanaik, Surendranaik; Venkatesh, Talavara ... Vinuth, Mirle</p>
+            </div>
+            </div>
+
+            <button class="view-more-btn" id="viewMoreBtn" onclick="togglePublications()">View More</button>
         </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project">
+        <section id="patents">
+            <h2>Patents</h2>
+            <div class="patent">
                 <h3>Novel Anti-TB Heterocyclic Compounds</h3>
                 <p>Filed Indian Patent (Application No. 202541004838) for coumarin-imidazole derivatives.</p>
             </div>
-            <div class="project">
-                <h3>Electrochemical Sensors</h3>
-                <p>Developed coumarin-based sensors for catechol detection and fingerprint imaging.</p>
+        </section>
+
+        <section id="conferences">
+            <h2>Conferences</h2>
+
+            <div class="publication">
+                <h3>Rasayan 18 — Two-Day International Symposium on Science Beyond Boundary (Jan 29–30, 2024)</h3>
+                <p>Presented a poster on "Synthesis and characterization of some novel NLOphoric coumarin-fused heterocyclic azo dyes and their electrochemical, antimicrobial, in silico docking studies, and LFPs applications" — Jointly organized by Chirantan Rasayan Sanstha®, Vidyasagar University Campus, Midnapore, West Bengal, and CHRIST (Deemed to be University), Bengaluru, Karnataka.</p>
             </div>
+
+            <div class="publication">
+                <h3>ISEMS-2024 — International Conference on Innovations in Sustainable Energy and Material Science (Mar 1–2, 2024)</h3>
+                <p>Delivered an oral presentation on "Synthesis of NLOphoric 4-methyl coumarin-fused barbituric acid as an electrochemical sensor for the detection of catechol and a probe for latent fingerprints" — Held at Jawaharlal Nehru New College of Engineering, Shivamogga with collaboration of District Biofuel Research, Information and Demonstration Centre (BRIDC), KSCST – Bengaluru and Karnataka State Bioenergy Development Board – Bengaluru.</p>
+            </div>
+
+            <div class="publication">
+                <h3>ICACPS-2025 — International Conference on Advances in Chemical and Physical Sciences (Jan 23–24, 2025)</h3>
+                <p>Presented a poster on "Synthesis, characterization, and theoretical studies on non-linear optical properties of coumarin conjugated imidazole derivatives and evaluation of their anti-bacterial activity" — Held at Amrita Vishwa Vidyapeetham Mysuru Campus, Mysuru, Karnataka.</p>
+            </div>
+
+            <div class="conf-extra" id="confExtra">
+                <div class="publication">
+                    <h3>National Workshop on "Recent Trends in Material Frontiers: Chemical and Biological Aspects" (Aug 1–5, 2022)</h3>
+                    <p>Participated in the Five Days National Workshop — Amity University, Kolkata (Online).</p>
+                </div>
+
+                <div class="publication">
+                    <h3>National Intellectual Property Awareness Program (Aug 17, 2022)</h3>
+                    <p>Participated in the IP Awareness/Training program under the "National Intellectual Property Awareness Program" — Intellectual Property Office, India (Online).</p>
+                </div>
+
+                <div class="publication">
+                    <h3>Seven-Day National Level DST-STUTI Training Programme (Nov 14–20, 2022)</h3>
+                    <p>Participated in a national-level training programme — Conducted by Mangalore University, Mangalagangothri, Karnataka, in collaboration with Shivaji University, Kolhapur, Maharashtra.</p>
+                </div>
+
+                <div class="publication">
+                    <h3>Hands-on Training Program on Electrochemical Techniques and Energy Storage Systems (Jun 26, 2023)</h3>
+                    <p>Participated in a one-day hands-on training program — Held at Centre for Incubation, Innovation, Research and Consultancy (CIIRC), Jyothy Institute of Technology Campus, Bengaluru.</p>
+                </div>
+            </div>
+
+            <button class="view-more-btn" id="viewConfBtn" onclick="toggleConferences()">View More</button>
         </section>
 
         <section id="contact">
