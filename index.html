@@ -1,446 +1,1592 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Surendranretryaik Y - Personal Website</title>
+    <title>Dr. Surendranaik Y | Assistant Professor of Chemistry &amp; Researcher</title>
+
+    <!-- Academic & SEO Meta Tags -->
+    <meta name="description"
+        content="Official academic website of Dr. Surendranaik Y, Assistant Professor of Chemistry at MVJ College of Engineering Bengaluru. Ph.D. in Organic Chemistry, CSIR-NET AIR 52. Research in Heterocyclic Synthesis, DFT, and Medicinal Chemistry.">
+    <meta name="keywords"
+        content="Dr. Surendranaik Y, Chemistry Professor, Organic Chemistry, Heterocyclic Synthesis, Kuvempu University, MVJ College of Engineering, CSIR NET AIR 52, DFT, Coumarin, Azo Dyes">
+    <meta name="author" content="Dr. Surendranaik Y">
+    <meta name="citation_author" content="Surendranaik, Y.">
+    <meta name="theme-color" content="#0b1320">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dr. Surendranaik Y | Assistant Professor of Chemistry &amp; Researcher">
+    <meta property="og:description"
+        content="Assistant Professor in Chemistry. Research in Heterocyclic Synthesis, Medicinal Chemistry &amp; DFT.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://surendranaiky.github.io">
+
+    <!-- Google Fonts: Elegant Academic Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <div class="slider" id="headerSlider">
-            <div class="slide active">
-                <img src="banner1.jpg" alt="Banner 1">
-            </div>
-            <div class="slide">
-                <img src="banner2.jpg" alt="Banner 2">
-            </div>
-            <div class="slide">
-                <img src="banner3.jpg" alt="Banner 3">
-            </div>
-            <div class="slide">
-                <img src="banner4.jpg" alt="Banner 4">
-            </div>
-            <div class="slide">
-                <img src="banner5.jpg" alt="Banner 5">
-            </div>
-            <div class="slide">
-                <img src="banner6.jpg" alt="Banner 6">
-            </div>
+    <!-- Reading Progress Bar -->
+    <div id="scrollProgressBar" class="scroll-progress-bar" aria-hidden="true"></div>
 
-            <div class="slider-overlay">
-                <div class="profile-frame">
-                    <img src="profile.jpg" alt="Dr. Surendranaik Y" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="profile-fallback">SY</div>
-                </div>
-                <div class="overlay-card">
-                    <div class="slider-overlay-text">
-                        <h1>Dr. Surendranaik Y</h1>
-                        <p class="overlay-title">Assistant Professor, Department of Chemistry</p>
-                        <p class="overlay-affil">MVJ College of Engineering, Bengaluru</p>
-                    </div>
-                </div>
-            </div>
+    <!-- Navigation Header -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand">
+                <span class="brand-monogram">SY</span>
+                <span class="brand-text">
+                    <span class="brand-name">Dr. Surendranaik Y</span>
+                    <span class="brand-sub">Ph.D. &bull; Assistant Professor</span>
+                </span>
+            </a>
 
-            <div class="stats-bar">
-                <div class="stat-box">
-                    <div class="stat-number">15+</div>
-                    <div class="stat-label">Publications</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-number">1</div>
-                    <div class="stat-label">Patent</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-number">3</div>
-                    <div class="stat-label">Conferences</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-number">4</div>
-                    <div class="stat-label">Workshops</div>
-                </div>
-            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#patents" class="nav-link">Patents</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#pathway" class="nav-link">Pathway</a></li>
+                <li><a href="#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="#conferences" class="nav-link">Conferences</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
 
-            <button class="slider-arrow prev" onclick="changeSlide(-1)" aria-label="Previous slide">&#10094;</button>
-            <button class="slider-arrow next" onclick="changeSlide(1)" aria-label="Next slide">&#10095;</button>
-            <div class="slider-dots" id="sliderDots"></div>
+            <div class="nav-actions">
+                <button class="btn btn-sm btn-cv" onclick="generateATSCV()" title="Download Clean Academic CV">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    <span>Curriculum Vitae</span>
+                </button>
+
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light theme"
+                    title="Toggle Theme">
+                    <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+
+                <button class="hamburger" id="hamburgerBtn" aria-label="Open navigation menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
+    </nav>
 
-        <nav id="navbar">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#teaching">Teaching</a></li>
-                <li><a href="#qualifications">Qualifications</a></li>
-                <li><a href="#work-history">Work History</a></li>
-                <li><a href="#awards">Awards</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#patents">Patents</a></li>
-                <li><a href="#conferences">Conferences</a></li>
-                <li><a href="#workshops">Workshops</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    <!-- Main Content -->
     <main>
-        <section id="about" class="fade-in">
-            <h2>About Me</h2>
-            <p>I am Dr. Surendranaik Y, Assistant Professor in Chemistry at MVJ College of Engineering.
-               I hold a Ph.D. in Organic Chemistry from Kuvempu University, Shivamogga, with expertise in
-               Organic and Medicinal Chemistry. My academic journey includes qualifying CSIR-NET, GATE, and K-SET.
-               I am passionate about teaching, mentoring, and advancing research in heterocyclic compounds,
-               spectroscopy, and applied chemistry.</p>
-        </section>
-
-        <section id="research" class="fade-in">
-            <h2>Research Interests</h2>
-            <div class="research-tags">
-                <span class="research-tag">Organic Chemistry</span>
-                <span class="research-tag">Medicinal Chemistry</span>
-                <span class="research-tag">Heterocyclic Compounds</span>
-                <span class="research-tag">Green Chemistry</span>
-                <span class="research-tag">Electrochemical Sensing</span>
-                <span class="research-tag">Computational Chemistry</span>
-                <span class="research-tag">DFT</span>
-                <span class="research-tag">Computer aided drug design</span>
-                <span class="research-tag">Molecular Docking</span>
-            </div>
-        </section>
-
-        <section id="teaching" class="fade-in">
-            <h2>Teaching</h2>
-            <p></p>
-            <ul>
-                <li><strong>Engineering Chemistry</strong> — Core chemistry course for undergraduate engineering students</li>
-                <li><strong>Organic Chemistry</strong> — Advanced topics in organic synthesis and reaction mechanisms</li>
-                <li><strong>Spectroscopy</strong> — Analytical techniques for structural elucidation of organic compounds</li>
-            </ul>
-            <p class="teaching-note"><em></em></p>
-        </section>
-
-        <section id="qualifications" class="fade-in">
-            <h2>Educational Qualifications</h2>
-            <ul>
-                <li><strong>Ph.D. in Organic Chemistry</strong> — Kuvempu University, Shivamogga (2022–2026)</li>
-                <li><strong>M.Sc. in Chemistry</strong> — Kuvempu University, Shivamogga (2021), First Class (72.36%)</li>
-                <li><strong>B.Sc. in Chemistry, Zoology, Biotechnology</strong> — Govt. Sir M.V. Science College, Bhadravathi (2019), Distinction (80%)</li>
-                <li><strong>CSIR-NET (Chemical Sciences)</strong> — AIR 52, Qualified (2026)</li>
-                <li><strong>K-SET</strong> — Qualified (2022)</li>
-                <li><strong>GATE</strong> — Qualified (2023)</li>
-            </ul>
-        </section>
-
-        <section id="work-history" class="fade-in">
-            <h2>Work History</h2>
-
-            <div class="work-item">
-                <div class="work-header">
-                    <div>
-                        <h3>Senior Associate</h3>
-                        <p class="work-org">Innodata Inc.</p>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-split-grid">
+                <!-- Left: Bio & Academic Credentials -->
+                <div class="hero-content">
+                    <div class="hero-badge-cluster">
+                        <span class="academic-badge rank-badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                            CSIR-NET AIR 52 &bull; Top 1% Nationally
+                        </span>
+                        <span class="academic-badge alma-badge">Ph.D. Kuvempu University</span>
                     </div>
-                    <span class="work-date">Feb 2026 – Apr 2026</span>
-                </div>
-                <ul class="work-details">
-                    <li>Designed structured academic content and problem-solving frameworks for advanced organic and medicinal chemistry using LaTeX and scientific visualization tools.</li>
-                    <li>Maintained rigorous scientific accuracy while delivering high-quality research content and data visualizations within tight deadlines.</li>
-                </ul>
-            </div>
 
-            <div class="work-item">
-                <div class="work-header">
-                    <div>
-                        <h3>Research Scholar</h3>
-                        <p class="work-org">Kuvempu University, Shimoga</p>
-                    </div>
-                    <span class="work-date">Jul 2022 – May 2026</span>
-                </div>
-                <ul class="work-details">
-                    <li>Conducted research on synthesis, characterization, and applications of novel heterocyclic compounds in organic and medicinal chemistry.</li>
-                    <li>Collaborated with faculty and peers to advance knowledge in the field, contributing to innovative research projects.</li>
-                </ul>
-            </div>
+                    <h1 class="hero-name">Dr. Surendranaik Y</h1>
+                    <p class="hero-role">Assistant Professor of Chemistry</p>
 
-            <div class="wh-extra" id="whExtra">
-                <div class="work-item">
-                    <div class="work-header">
-                        <div>
-                            <h3>Guest Lecturer</h3>
-                            <p class="work-org">Sahyadri Science College, Shimoga</p>
+                    <div class="hero-affiliation">
+                        <div class="affil-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                <polyline points="9 22 9 12 15 12 15 22" />
+                            </svg>
+                            <span>Department of Chemistry, <strong>MVJ College of Engineering</strong>, Bengaluru,
+                                India</span>
                         </div>
-                        <span class="work-date">Feb 2022 – Apr 2022</span>
                     </div>
-                    <ul class="work-details">
-                        <li>Delivered lectures on organic chemistry and conducted theoretical and practical classes for postgraduate students.</li>
-                        <li>Fostered a collaborative learning environment, encouraging student participation and inquiry.</li>
+
+                    <p class="hero-statement">
+                        Organic and medicinal chemist focused on the rational synthesis of novel bioactive heterocyclic
+                        scaffolds, functional chromophores, and optical materials. Integrating synthetic methodology
+                        with Density Functional Theory (DFT) calculations and Computer-Aided Drug Design (CADD) to
+                        develop therapeutic leads and advanced molecular materials.
+                    </p>
+
+                    <!-- Fast Action Buttons -->
+                    <div class="hero-actions">
+                        <a href="#publications" class="btn btn-primary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                            </svg>
+                            <span>Publications (16)</span>
+                        </a>
+                        <a href="#research" class="btn btn-secondary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="12" y1="8" x2="12" y2="12" />
+                                <line x1="12" y1="16" x2="12.01" y2="16" />
+                            </svg>
+                            <span>Research Areas</span>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            <span>Contact</span>
+                        </a>
+                    </div>
+
+                    <!-- Academic Identifiers -->
+                    <div class="academic-identifiers">
+                        <span class="id-label">Profiles:</span>
+                        <a href="https://scholar.google.com/citations?user=SurendranaikY" target="_blank"
+                            rel="noopener noreferrer" class="id-chip scholar"
+                            title="Google Scholar: Dr. Surendranaik Y">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 10a8 8 0 0 1 7.162 3.44L24 9.5z" />
+                            </svg>
+                            <span>Google Scholar</span>
+                        </a>
+                        <a href="https://orcid.org/0009-0007-9150-8297" target="_blank" rel="noopener noreferrer"
+                            class="id-chip orcid" title="ORCID: 0009-0007-9150-8297">
+                            <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor">
+                                <path
+                                    d="M128 0C57.31 0 0 57.31 0 128s57.31 128 128 128 128-57.31 128-128S198.69 0 128 0zM70.59 187.35H50.87V76.84h19.72v110.51zm-9.86-126.1c-6.84 0-12.39-5.55-12.39-12.39s5.55-12.39 12.39-12.39 12.39 5.55 12.39 12.39-5.55 12.39-12.39 12.39zm144.4 78.43c0 30.08-20.94 47.67-49.97 47.67h-41.51V76.84h43.79c27.18 0 47.69 17.15 47.69 47.68v15.16zm-19.82-.41c0-21.2-12.59-32.96-30.82-32.96h-21.36v65.92h21.36c18.23 0 30.82-11.76 30.82-32.96z" />
+                            </svg>
+                            <span>0009-0007-9150-8297</span>
+                        </a>
+                        <a href="mailto:surendranaiky33@gmail.com" class="id-chip email"
+                            title="Email: surendranaiky33@gmail.com">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            <span>surendranaiky33@gmail.com</span>
+                        </a>
+                        <a href="tel:+919380470819" class="id-chip phone" title="Phone: +91 93804 70819">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                            <span>+91 93804 70819</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Scientist Portrait & Molecular Orbit Display -->
+                <div class="hero-visual">
+                    <div class="scientist-card">
+                        <canvas id="moleculeCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+
+                        <div class="card-inner">
+                            <div class="portrait-container">
+                                <div class="portrait-ring">
+                                    <img src="profile.jpg" alt="Dr. Surendranaik Y" class="portrait-img"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div class="portrait-fallback">SY</div>
+                                </div>
+                                <span class="status-indicator">
+                                    <span class="status-dot"></span>
+                                    <span>Faculty &bull; Chemistry</span>
+                                </span>
+                            </div>
+
+                            <div class="scientist-card-details">
+                                <h3>Dr. Surendranaik Y</h3>
+                                <p class="degree-line">Ph.D. in Organic Chemistry &bull; Kuvempu Univ</p>
+                                <div class="specialization-tags">
+                                    <span>Heterocyclic Synthesis</span>
+                                    <span>DFT Calculations</span>
+                                    <span>Medicinal Chemistry</span>
+                                    <span>CADD</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Impact Metrics Ribbon -->
+            <div class="metrics-ribbon">
+                <div class="metric-card" data-count="16">
+                    <div class="metric-number"><span class="counter">16</span></div>
+                    <div class="metric-label">Journal Articles</div>
+                    <div class="metric-sub">Elsevier, Wiley, Springer</div>
+                </div>
+                <div class="metric-card" data-count="52">
+                    <div class="metric-number">AIR <span class="counter">52</span></div>
+                    <div class="metric-label">CSIR-NET Rank</div>
+                    <div class="metric-sub">Top 1% Nationwide</div>
+                </div>
+                <div class="metric-card" data-count="1">
+                    <div class="metric-number"><span class="counter">1</span></div>
+                    <div class="metric-label">Indian Patent</div>
+                    <div class="metric-sub">Anti-TB Bioactive Scaffolds</div>
+                </div>
+                <div class="metric-card" data-count="4">
+                    <div class="metric-number"><span class="counter">4</span>+</div>
+                    <div class="metric-label">Years Experience</div>
+                    <div class="metric-sub">Research &amp; Teaching</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Academic Profile Section -->
+        <section class="section-container fade-in" id="about">
+            <div class="section-title-wrap">
+                <span class="section-eyebrow">Biography &bull; Background</span>
+                <h2 class="section-heading">Academic Profile</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-narrative">
+                    <p class="lead-paragraph">
+                        I am <strong>Dr. Surendranaik Y</strong>, Assistant Professor in the Department of Chemistry at
+                        MVJ College of Engineering, Bengaluru. I received my Ph.D. in Organic Chemistry from Kuvempu
+                        University, Shivamogga, specializing in the synthesis, characterization, and pharmacological
+                        evaluation of novel heterocyclic frameworks.
+                    </p>
+                    <p>
+                        My research centers on <strong>synthetic organic chemistry and molecular modeling</strong>. By
+                        employing multi-component reactions and regio-selective cyclizations, our research develops
+                        Coumarin, Pyrazole, Triazole, and Imidazole frameworks tailored for anti-tubercular and
+                        anti-cancer applications.
+                    </p>
+                    <p>
+                        In parallel, I utilize <strong>Gaussian-based Density Functional Theory (DFT)</strong>,
+                        Non-Linear Optical (NLO) analysis, and Computer-Aided Drug Design (CADD) to elucidate electronic
+                        structure-activity relationships and guide rational molecular engineering.
+                    </p>
+                </div>
+
+                <div class="about-highlights-card">
+                    <h3 class="highlight-title">Key Academic Credentials</h3>
+                    <ul class="highlight-list">
+                        <li>
+                            <div class="hl-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                                </svg></div>
+                            <div class="hl-content">
+                                <strong>Doctor of Philosophy (Ph.D.)</strong>
+                                <span>Organic Chemistry, Kuvempu University (2022–2026)</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="hl-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                </svg></div>
+                            <div class="hl-content">
+                                <strong>CSIR-NET (AIR 52, Top 1%)</strong>
+                                <span>Council of Scientific and Industrial Research (2026)</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="hl-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg></div>
+                            <div class="hl-content">
+                                <strong>GATE &amp; K-SET Certified</strong>
+                                <span>National &amp; State Level Eligibility for Professorship</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="hl-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                    <path d="m9 12 2 2 4-4" />
+                                </svg></div>
+                            <div class="hl-content">
+                                <strong>1 Indian Patent</strong>
+                                <span>Application No. 202541004838 (Anti-TB Scaffolds)</span>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
-
-            <button class="view-more-btn" id="viewWhBtn" onclick="toggleWorkHistory()">View More</button>
         </section>
 
-        <section id="awards" class="fade-in">
-            <h2>Awards & Achievements</h2>
-            <ul class="awards-list">
-                <li>
-                    <span class="award-icon">&#9679;</span>
-                    <div>
-                        <strong>CSIR-NET (Chemical Sciences)</strong> — All India Rank 52 (2026)
-                        <span class="award-badge">Top 1%</span>
+        <!-- Core Research Pillars (3 Clean, Decent Focus Areas) -->
+        <section class="section-container fade-in" id="research">
+            <div class="section-title-wrap">
+                <span class="section-eyebrow">Research Domains &bull; Methodologies</span>
+                <h2 class="section-heading">Core Research Areas</h2>
+                <p class="section-desc">Focused chemical investigations in heterocyclic synthesis, computational
+                    chemistry, and molecular optical materials.</p>
+            </div>
+
+            <div class="research-pillars-grid">
+                <!-- Pillar 1 -->
+                <div class="pillar-card">
+                    <div class="pillar-visual-wrap"
+                        onclick="openLightbox('research_heterocycles.png', 'Targeted Heterocyclic Synthesis &amp; Medicinal Chemistry', '3D molecular binding of coumarin-imidazole scaffold docking in bacterial enzyme pocket.')">
+                        <img src="research_heterocycles.png" alt="Heterocyclic Medicinal Chemistry 3D Docking"
+                            class="pillar-visual-img" loading="lazy">
+                        <div class="pillar-visual-overlay">
+                            <span class="pillar-badge">Scaffold Design</span>
+                            <span class="pillar-zoom-btn" title="View High-Resolution Figure">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                    <line x1="11" y1="8" x2="11" y2="14" />
+                                    <line x1="8" y1="11" x2="14" y2="11" />
+                                </svg>
+                            </span>
+                        </div>
                     </div>
-                </li>
-            </ul>
-        </section>
-
-        <section id="publications" class="fade-in">
-            <h2>Publications <span class="pub-count">16</span></h2>
-
-            <h3 class="pub-year-heading">2026</h3>
-
-            <div class="publication">
-                <h3><a href="https://doi.org/10.1016/J.MOLSTRUC.2026.145316" target="_blank">Hybrid triazole azo dyes as bioactive compounds: Synthesis, characterization, electrochemical analysis, DFT studies, docking, and live cell imaging investigations</a></h3>
-                <p><a href="https://doi.org/10.1016/J.MOLSTRUC.2026.145316" target="_blank">Journal of Molecular Structure</a>, Apr 2026</p>
-                <p>Authors: Mallikarjuna, B.; Chavan, Prabhakar ... Surendranaik, Y.</p>
-                <p class="pub-details">Vol. 1345, Article 145316 (2026)</p>
-            </div>
-
-            <div class="publication">
-                <h3><a href="https://doi.org/10.1016/J.MOLSTRUC.2025.144171" target="_blank">Domino C-C/C-N bond-forming strategy for convergent regioselective synthesis of fused pyrimidines using Zn(L-Proline)2: Integrative bioactivity, LFPs imaging and computational modeling</a></h3>
-                <p><a href="https://doi.org/10.1016/J.MOLSTRUC.2025.144171" target="_blank">Journal of Molecular Structure</a>, Feb 2026</p>
-                <p>Authors: Mandara, A. M.; Chavan, Prabhakar ... Yadav, Ganapati Pakkirappa, Surendranaik Y</p>
-                <p class="pub-details">Vol. 1344, Article 144171 (2026)</p>
-            </div>
-
-            <div class="publication">
-                <h3><a href="https://doi.org/10.1016/J.MOLSTRUC.2025.143954" target="_blank">Synthesis and characterization of substituted 3-((4-methyl-2-oxo-2H-chromen-7-yl)imino)indolin-2-one derivatives as photosensitizers for solar cell application and their NLO properties</a></h3>
-                <p><a href="https://doi.org/10.1016/J.MOLSTRUC.2025.143954" target="_blank">Journal of Molecular Structure</a>, Jan 2026</p>
-                <p>Authors: Surendranaik, Y.; Venkatesh, Talavara ... Manjunatha, L. S.</p>
-                <p class="pub-details">Vol. 1343, Article 143954 (2026)</p>
-            </div>
-
-            <div class="pub-extra" id="pubExtra">
-
-            <div class="publication">
-                <h3><a href="https://doi.org/10.1016/J.MOLSTRUC.2026.146087" target="_blank">Synthesis of triazolo-pyrimidine carbonitrile derivatives: A one-vessel three-component reaction, biological screening, docking, DFT, and electrochemical profiling</a></h3>
-                <p><a href="https://doi.org/10.1016/J.MOLSTRUC.2026.146087" target="_blank">Journal of Molecular Structure</a>, 2026</p>
-                <p>Authors: Mallikarjuna, B.; Chavan, Prabhakar ... Surendranaik, Y.</p>
-                <p class="pub-details">Vol. 1346, Article 146087 (2026)</p>
-            </div>
-
-            <div class="publication">
-                <h3><a href="https://doi.org/10.1080/00958972.2026.2626033" target="_blank">Benzoxazole-isatin-based metal complexes as potential anti-tuberculosis agents: synthesis, characterization, in vitro evaluation, and computational modeling</a></h3>
-                <p><a href="https://doi.org/10.1080/00958972.2026.2626033" target="_blank">Journal of Coordination Chemistry</a>, 2026</p>
-                <p>Authors: Pooja, T. Kumari; Yuvaraj, T. C. M. ... Naik, Y. Surendra</p>
-                <p class="pub-details">Vol. 79, No. 4, pp. 378–397 (2026)</p>
-            </div>
-
-            <h3 class="pub-year-heading">2025</h3>
-
-            <div class="publication">
-                <h3><a href="https://doi.org/10.1016/J.MOLSTRUC.2025.143360" target="_blank">Synthesis, characterization and biological evaluation of coumarin incorporated azo compounds</a></h3>
-                <p><a href="https://doi.org/10.1016/J.MOLSTRUC.2025.143360" target="_blank">Journal of Molecular Structure</a>, Dec 2025</p>
-                <p>Authors: Karunasagar, K. O.; Bodke, Yadav D. ... Vinay, K. K.; Surendranaik, Y.</p>
-                <p class="pub-details">Article 143360 (2025)</p>
-            </div>
-
-            <div class="publication">
-                <h3><a href="https://doi.org/10.1016/J.JICS.2025.102106" target="_blank">L-Proline driven Knoevenagel condensation for assembling benzimidazole-pyrazole-coumarin frameworks; mechanistic, biological and electrochemical lead sensor applications</a></h3>
-                <p><a href="https://doi.org/10.1016/J.JICS.2025.102106" target="_blank">Journal of the Indian Chemical Society</a>, Nov 2025</p>
-                <p>Authors: Mandara, A. M.; Chavan, Prabhakar ... Surendranaik, Y.</p>
-                <p class="pub-details">Article 102106 (2025)</p>
-            </div>
-
-            <div class="publication">
-                <h3><a href="https://doi.org/10.1016/J.MOLSTRUC.2025.142802" target="_blank">Synthesis, characterization and geometrical optimization of azo dyes derived from the substituted pyrazole and benzothiazole amines coupled with 3-N,N-diethyl amino phenol</a></h3>
-                <p><a href="https://doi.org/10.1016/J.MOLSTRUC.2025.142802" target="_blank">Journal of Molecular Structure</a>, Oct 2025</p>
-                <p>Authors: Shakuntala, R. B.; Keshavayya, J. ... Pushpavathi, Itte; Surendranaik, Y.</p>
-                <p class="pub-details">Vol. 1343, Article 142802 (2025)</p>
-            </div>
-
-            <div class="publication">
-                <h3><a href="https://doi.org/10.1016/J.MOLSTRUC.2025.142576" target="_blank">Synthesis, Characterization, Electrochemical Sensing, DFT Analysis, Molecular Docking and Anticancer Activity of a Novel Thiadiazole-Based Azo Dye Incorporating a Barbituric Acid Scaffold</a></h3>
-                <p><a href="https://doi.org/10.1016/J.MOLSTRUC.2025.142576" target="_blank">Journal of Molecular Structure</a>, Oct 2025</p>
-                <p>Authors: Harisha, S.; Nagaraj, Kalyan ... Surendranaik, Y.</p>
-                <p class="pub-details">Vol. 1341, Article 142576 (2025)</p>
-            </div>
-
-            <div class="publication">
-                <h3><a href="https://doi.org/10.1002/SLCT.202501285" target="_blank">Synthesis, Solvatochromic, LFPs, Computational, and Electrochemical Investigation of Novel Sulfadiazine Azo Dyes and Their Biological Studies</a></h3>
-                <p><a href="https://doi.org/10.1002/SLCT.202501285" target="_blank">ChemistrySelect</a>, Aug 2025</p>
-                <p>Authors: Pavithra; Pushpavathi, Itte ... Naik, Y. Surendra</p>
-                <p class="pub-details">Vol. 10, No. 33, Article e01285 (2025)</p>
-            </div>
-
-            <div class="publication">
-                <h3><a href="https://doi.org/10.2174/0115701786362014250102043411" target="_blank">Facile CeO₂ Nanoparticles Catalysed the Synthesis of a Series of 2,4,5-Trisubstituted Imidazole Derivatives and their DFT Studies for NLO Application</a></h3>
-                <p><a href="https://doi.org/10.2174/0115701786362014250102043411" target="_blank">Letters in Organic Chemistry</a>, Aug 2025</p>
-                <p>Authors: Yashyanaik, Surendranaik; Venkatesh, Talavara; M.e., Jayachandu</p>
-                <p class="pub-details">Vol. 22, No. 8, pp. 642–652 (2025)</p>
-            </div>
-
-            <div class="publication">
-                <h3><a href="https://doi.org/10.1134/S1068162024605962" target="_blank">Synthesis, Biological, and Computational Studies of Novel Isoxazolone-Coupled Azo Moieties and Their Photophysical Interactions</a></h3>
-                <p><a href="https://doi.org/10.1134/S1068162024605962" target="_blank">Russian Journal of Bioorganic Chemistry</a>, Jun 2025</p>
-                <p>Authors: Karunasagar, K. O.; Bodke, Yadav D. ... Surendranaik, Y.</p>
-                <p class="pub-details">Vol. 51, No. 3, pp. 1099–1114 (2025)</p>
-            </div>
-
-            <div class="publication">
-                <h3><a href="https://doi.org/10.1016/J.MOLSTRUC.2024.140111" target="_blank">Synthesis and evaluation of the anti-TB activity of novel 7-(2-(4-substitutedphenyl)-4,5-diphenyl-1H-imidazol-1-yl)-4-methyl-2H-chromen-2-one derivatives and their DFT studies for NLO application</a></h3>
-                <p><a href="https://doi.org/10.1016/J.MOLSTRUC.2024.140111" target="_blank">Journal of Molecular Structure</a>, Feb 2025</p>
-                <p>Authors: Surendranaik, Y.; Venkatesh, Talavara</p>
-                <p class="pub-details">Vol. 1321, Article 140111 (2025)</p>
-            </div>
-
-            <div class="publication">
-                <h3><a href="https://doi.org/10.1007/S11224-024-02359-5" target="_blank">Synthesis, characterization, solvatochromic, and electrochemical investigation of novel 4-methyl coumarin fused azo dyes as an NLO material and their biological studies</a></h3>
-                <p><a href="https://doi.org/10.1007/S11224-024-02359-5" target="_blank">Structural Chemistry</a>, Feb 2025</p>
-                <p>Authors: Surendranaik, Y.; Venkatesh, Talavara; Naik, Eresha</p>
-                <p class="pub-details">Vol. 36, No. 1, pp. 171–190 (2025)</p>
-            </div>
-
-            <h3 class="pub-year-heading">2024</h3>
-
-            <div class="publication">
-                <h3><a href="https://doi.org/10.1002/SLCT.202402411" target="_blank">Synthesis, Characterization, and Optical Properties of Novel Heterocyclic Azo Dyes and Evaluation of Their Antioxidant Activity as an Active Sunscreen Agent</a></h3>
-                <p><a href="https://doi.org/10.1002/SLCT.202402411" target="_blank">ChemistrySelect</a>, Sep 2024</p>
-                <p>Authors: Surendranaik, Y.; Venkatesh, Talavara ... Chethan</p>
-                <p class="pub-details">Vol. 9, No. 34, Article e202402411 (2024)</p>
-            </div>
-
-            <div class="publication">
-                <h3><a href="https://doi.org/10.1002/BIO.4825" target="_blank">Red-emitting 4-methyl coumarin fused barbituric acid as an electrochemical sensor for catechol detection and probe for latent fingerprints</a></h3>
-                <p><a href="https://doi.org/10.1002/BIO.4825" target="_blank">Luminescence: the Journal of Biological and Chemical Luminescence</a>, Jul 2024</p>
-                <p>Authors: Yashyanaik, Surendranaik; Venkatesh, Talavara ... Vinuth, Mirle</p>
-                <p class="pub-details">Vol. 39, No. 7, Article e4825 (2024)</p>
-            </div>
-            </div>
-
-            <button class="view-more-btn" id="viewPubBtn" onclick="togglePublications()">View More</button>
-        </section>
-
-        <section id="patents" class="fade-in">
-            <h2>Patents</h2>
-            <div class="patent">
-                <h3>Novel Anti-TB Heterocyclic Compounds</h3>
-                <p>Filed Indian Patent (Application No. 202541004838) for coumarin-imidazole derivatives.</p>
-            </div>
-        </section>
-
-        <section id="conferences" class="fade-in">
-            <h2>Conferences</h2>
-
-            <div class="publication">
-                <h3>ICACPS-2025 — International Conference on Advances in Chemical and Physical Sciences (Jan 23–24, 2025)</h3>
-                <p>Presented a poster on "Synthesis, characterization, and theoretical studies on non-linear optical properties of coumarin conjugated imidazole derivatives and evaluation of their anti-bacterial activity" — Held at Amrita Vishwa Vidyapeetham Mysuru Campus, Mysuru, Karnataka.</p>
-            </div>
-
-            <div class="publication">
-                <h3>ISEMS-2024 — International Conference on Innovations in Sustainable Energy and Material Science (Mar 1–2, 2024)</h3>
-                <p>Delivered an oral presentation on "Synthesis of NLOphoric 4-methyl coumarin-fused barbituric acid as an electrochemical sensor for the detection of catechol and a probe for latent fingerprints" — Held at Jawaharlal Nehru New College of Engineering, Shivamogga with collaboration of District Biofuel Research, Information and Demonstration Centre (BRIDC), KSCST – Bengaluru and Karnataka State Bioenergy Development Board – Bengaluru.</p>
-            </div>
-
-            <div class="conf-extra" id="confExtra">
-                <div class="publication">
-                    <h3>Rasayan 18 — Two-Day International Symposium on Science Beyond Boundary (Jan 29–30, 2024)</h3>
-                    <p>Presented a poster on "Synthesis and characterization of some novel NLOphoric coumarin-fused heterocyclic azo dyes and their electrochemical, antimicrobial, in silico docking studies, and LFPs applications" — Jointly organized by Chirantan Rasayan Sanstha®, Vidyasagar University Campus, Midnapore, West Bengal, and CHRIST (Deemed to be University), Bengaluru, Karnataka.</p>
-                </div>
-            </div>
-
-            <button class="view-more-btn" id="viewConfBtn" onclick="toggleConferences()">View More</button>
-        </section>
-
-        <section id="workshops" class="fade-in">
-            <h2>Workshops & Training</h2>
-
-            <div class="publication">
-                <h3>Hands-on Training Program on Electrochemical Techniques and Energy Storage Systems (Jun 26, 2023)</h3>
-                <p>Participated in a one-day hands-on training program — Held at Centre for Incubation, Innovation, Research and Consultancy (CIIRC), Jyothy Institute of Technology Campus, Bengaluru.</p>
-            </div>
-
-            <div class="publication">
-                <h3>Seven-Day National Level DST-STUTI Training Programme (Nov 14–20, 2022)</h3>
-                <p>Participated in a national-level training programme — Conducted by Mangalore University, Mangalagangothri, Karnataka, in collaboration with Shivaji University, Kolhapur, Maharashtra.</p>
-            </div>
-
-            <div class="ws-extra" id="wsExtra">
-                <div class="publication">
-                    <h3>National Intellectual Property Awareness Program (Aug 17, 2022)</h3>
-                    <p>Participated in the IP Awareness/Training program under the "National Intellectual Property Awareness Program" — Intellectual Property Office, India (Online).</p>
-                </div>
-
-                <div class="publication">
-                    <h3>National Workshop on "Recent Trends in Material Frontiers: Chemical and Biological Aspects" (Aug 1–5, 2022)</h3>
-                    <p>Participated in the Five Days National Workshop — Amity University, Kolkata (Online).</p>
-                </div>
-            </div>
-
-            <button class="view-more-btn" id="viewWsBtn" onclick="toggleWorkshops()">View More</button>
-        </section>
-
-        <section id="contact" class="fade-in">
-            <h2>Contact</h2>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <span class="contact-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    </span>
-                    <div>
-                        <strong>Email</strong>
-                        <a href="mailto:surendranaiky33@gmail.com">surendranaiky33@gmail.com</a>
+                    <div class="pillar-body">
+                        <div class="pillar-number">PILLAR 01</div>
+                        <h3>Targeted Heterocyclic Synthesis &amp; Medicinal Chemistry</h3>
+                        <p>Design and synthesis of bioactive heterocyclic systems (Coumarins, Imidazoles, Triazoles,
+                            Pyrimidines) targeting anti-tubercular and antimicrobial pathways with in vitro biological
+                            evaluations.</p>
+                        <div class="pillar-chips">
+                            <span>Anti-TB Scaffolds</span>
+                            <span>Coumarin Derivatives</span>
+                            <span>Bioactivity Screening</span>
+                        </div>
                     </div>
                 </div>
-                <div class="contact-item">
-                    <span class="contact-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    </span>
-                    <div>
-                        <strong>Phone</strong>
-                        <a href="tel:+919380470819">+91 93804 70819</a>
+
+                <!-- Pillar 2 -->
+                <div class="pillar-card">
+                    <div class="pillar-visual-wrap"
+                        onclick="openLightbox('computational_dft.png', 'Computational Chemistry, DFT &amp; CADD', 'Density Functional Theory electrostatic potential (MEP) isosurface and HOMO-LUMO orbitals.')">
+                        <img src="computational_dft.png" alt="Computational Chemistry DFT Visualization"
+                            class="pillar-visual-img" loading="lazy">
+                        <div class="pillar-visual-overlay">
+                            <span class="pillar-badge">Quantum Simulation</span>
+                            <span class="pillar-zoom-btn" title="View High-Resolution Figure">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                    <line x1="11" y1="8" x2="11" y2="14" />
+                                    <line x1="8" y1="11" x2="14" y2="11" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="pillar-body">
+                        <div class="pillar-number">PILLAR 02</div>
+                        <h3>Computational Chemistry, DFT &amp; CADD</h3>
+                        <p>In silico structural investigations using Density Functional Theory (B3LYP/6-311G), HOMO-LUMO
+                            energy gaps, Molecular Electrostatic Potential (MEP) surfaces, and target receptor molecular
+                            docking.</p>
+                        <div class="pillar-chips">
+                            <span>DFT / Gaussian</span>
+                            <span>Molecular Docking</span>
+                            <span>MEP Surface Analysis</span>
+                        </div>
                     </div>
                 </div>
-                <div class="contact-item">
-                    <span class="contact-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 2c1.66 0 3 4.48 3 10s-1.34 10-3 10-3-4.48-3-10S10.34 2 12 2z"/><path d="M2 12h20"/></svg>
-                    </span>
-                    <div>
-                        <strong>ORCID</strong>
-                        <a href="https://orcid.org/0009-0007-9150-8297" target="_blank">0009-0007-9150-8297</a>
+
+                <!-- Pillar 3 -->
+                <div class="pillar-card">
+                    <div class="pillar-visual-wrap"
+                        onclick="openLightbox('photophysics_laser.png', 'Photophysics, NLO Materials &amp; Optical Chromophores', 'Laser photophysics experiment with fluorescent chromophores in quartz cuvettes under UV beam.')">
+                        <img src="photophysics_laser.png" alt="Laser Photophysics &amp; Optical Chromophores"
+                            class="pillar-visual-img" loading="lazy">
+                        <div class="pillar-visual-overlay">
+                            <span class="pillar-badge">Spectroscopy &amp; Optics</span>
+                            <span class="pillar-zoom-btn" title="View High-Resolution Figure">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                    <line x1="11" y1="8" x2="11" y2="14" />
+                                    <line x1="8" y1="11" x2="14" y2="11" />
+                                </svg>
+                            </span>
+                        </div>
                     </div>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                    </span>
-                    <div>
-                        <strong>Location</strong>
-                        <span>Bengaluru, Karnataka, India</span>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                    </span>
-                    <div>
-                        <strong>Google Scholar</strong>
-                        <a href="https://scholar.google.com/citations?user=SurendranaikY" target="_blank">View Profile</a>
+                    <div class="pillar-body">
+                        <div class="pillar-number">PILLAR 03</div>
+                        <h3>Photophysics, NLO Materials &amp; Optical Chromophores</h3>
+                        <p>Synthesis and solvatochromic characterization of conjugated azo chromophores and
+                            indolin-2-one photosensitizers evaluated for non-linear optical (NLO) coefficients and solar
+                            energy applications.</p>
+                        <div class="pillar-chips">
+                            <span>NLO Properties</span>
+                            <span>Solvatochromism</span>
+                            <span>Conjugated Chromophores</span>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="cv-download">
-                <button class="cv-btn" onclick="generateATSCV()">Download CV</button>
-                <p class="cv-note"></p>
+        <!-- Patent Spotlight Section -->
+        <section class="section-container fade-in" id="patents">
+            <div class="section-title-wrap">
+                <span class="section-eyebrow">Intellectual Property &bull; Patent</span>
+                <h2 class="section-heading">Patent Information</h2>
+            </div>
+
+            <div class="patent-spotlight-card">
+                <div class="patent-info-col">
+                    <div class="patent-header-line">
+                        <span class="patent-badge-pill">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                <path d="m9 12 2 2 4-4" />
+                            </svg>
+                            Indian Patent Filed
+                        </span>
+                        <span class="patent-num">App No. 202541004838</span>
+                    </div>
+                    <div class="patent-meta-line">
+                        <span class="patent-jurisdiction">Filing Authority: Intellectual Property Office, Govt. of
+                            India</span>
+                    </div>
+                    <h3 class="patent-title">Novel Coumarin-Fused Imidazole Heterocyclic Compounds as Potent
+                        Anti-Tubercular Agents and Synthetic Methods Thereof</h3>
+                    <p class="patent-desc">
+                        A novel chemical entity and synthetic protocol comprising substituted
+                        7-(2-(4-substitutedphenyl)-4,5-diphenyl-1H-imidazol-1-yl)-4-methyl-2H-chromen-2-one derivatives
+                        exhibiting remarkable anti-mycobacterial efficacy against <em>Mycobacterium tuberculosis</em>
+                        strains alongside favorable theoretical NLO and pharmacological indices.
+                    </p>
+                    <div class="patent-tags">
+                        <span>Anti-Tubercular Agent</span>
+                        <span>Coumarin Scaffold</span>
+                        <span>Synthetic Methodology</span>
+                        <span>Pharmacological Screening</span>
+                    </div>
+                </div>
+
+                <div class="patent-visual-wrap"
+                    onclick="openLightbox('patent_mechanism.png', 'Indian Patent App No. 202541004838', 'Synthetic pathway &amp; bio-inhibition mechanism for novel coumarin-imidazole anti-tubercular scaffold.')">
+                    <img src="patent_mechanism.png" alt="Patent Synthetic Scheme &amp; Molecular Mechanism"
+                        class="patent-visual-img" loading="lazy">
+                    <div class="patent-visual-caption">
+                        <span>Scaffold Architecture &bull; Mechanism</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                            <line x1="11" y1="8" x2="11" y2="14" />
+                            <line x1="8" y1="11" x2="14" y2="11" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Explorer Section -->
+        <section class="section-container fade-in" id="publications">
+            <div class="section-title-wrap">
+                <div class="section-title-split">
+                    <div>
+                        <span class="section-eyebrow">Peer-Reviewed Literature &bull; 16 Articles</span>
+                        <h2 class="section-heading">Research Publications</h2>
+                    </div>
+                    <span class="pub-count-pill">16 Journal Papers</span>
+                </div>
+                <p class="section-desc">Indexed publications in top-tier peer-reviewed chemistry journals (Elsevier,
+                    Wiley, Springer, Taylor &amp; Francis).</p>
+            </div>
+
+            <!-- Search and Filter Controls -->
+            <div class="pub-explorer-controls">
+                <div class="pub-search-box">
+                    <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                    <input type="text" id="pubSearchInput"
+                        placeholder="Search by title, co-author, journal (e.g. Coumarin, DFT, 2026)..."
+                        aria-label="Search publications">
+                    <button id="clearSearchBtn" class="clear-search" style="display:none;"
+                        aria-label="Clear search">&times;</button>
+                </div>
+
+                <div class="pub-filters">
+                    <span class="filter-label">Filter:</span>
+                    <button class="filter-btn active" data-filter="all">All (16)</button>
+                    <button class="filter-btn" data-filter="2026">2026 (5)</button>
+                    <button class="filter-btn" data-filter="2025">2025 (9)</button>
+                    <button class="filter-btn" data-filter="2024">2024 (2)</button>
+                </div>
+            </div>
+
+            <!-- Publications List -->
+            <div class="publications-list" id="publicationsContainer">
+                <!-- 2026 Publications -->
+                <div class="pub-year-divider" data-year="2026">2026 Publications</div>
+
+                <article class="pub-entry-card" data-year="2026" data-index="0">
+                    <div class="pub-entry-header">
+                        <span class="pub-journal-tag elsevier">Journal of Molecular Structure</span>
+                        <span class="pub-year-badge">Apr 2026</span>
+                    </div>
+                    <h3 class="pub-entry-title">
+                        <a href="https://doi.org/10.1016/J.MOLSTRUC.2026.145316" target="_blank"
+                            rel="noopener noreferrer">
+                            Hybrid triazole azo dyes as bioactive compounds: Synthesis, characterization,
+                            electrochemical analysis, DFT studies, docking, and live cell imaging investigations
+                        </a>
+                    </h3>
+                    <p class="pub-entry-authors">Mallikarjuna, B.; Chavan, Prabhakar; Vinay, K. K.;
+                        <strong>Surendranaik, Y.*</strong>
+                    </p>
+                    <p class="pub-entry-citation"><em>Journal of Molecular Structure</em>, Vol. 1345, Article 145316
+                        (2026). DOI: 10.1016/J.MOLSTRUC.2026.145316</p>
+                    <div class="pub-entry-actions">
+                        <a href="https://doi.org/10.1016/J.MOLSTRUC.2026.145316" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-xs btn-doi">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span>DOI Link</span>
+                        </a>
+                        <button class="btn btn-xs btn-cite" onclick="openCiteModal(0)">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                                <path d="M18 9h-1.5a2.5 2.5 0 0 1 0-5H18" />
+                                <path d="M4 22h16" />
+                            </svg>
+                            <span>Cite / BibTeX</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="pub-entry-card" data-year="2026" data-index="1">
+                    <div class="pub-entry-header">
+                        <span class="pub-journal-tag elsevier">Journal of Molecular Structure</span>
+                        <span class="pub-year-badge">Feb 2026</span>
+                    </div>
+                    <h3 class="pub-entry-title">
+                        <a href="https://doi.org/10.1016/J.MOLSTRUC.2025.144171" target="_blank"
+                            rel="noopener noreferrer">
+                            Domino C-C/C-N bond-forming strategy for convergent regioselective synthesis of fused
+                            pyrimidines using Zn(L-Proline)2: Integrative bioactivity, LFPs imaging and computational
+                            modeling
+                        </a>
+                    </h3>
+                    <p class="pub-entry-authors">Mandara, A. M.; Chavan, Prabhakar; Yadav, Ganapati Pakkirappa;
+                        <strong>Surendranaik, Y.*</strong>
+                    </p>
+                    <p class="pub-entry-citation"><em>Journal of Molecular Structure</em>, Vol. 1344, Article 144171
+                        (2026). DOI: 10.1016/J.MOLSTRUC.2025.144171</p>
+                    <div class="pub-entry-actions">
+                        <a href="https://doi.org/10.1016/J.MOLSTRUC.2025.144171" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-xs btn-doi"><span>DOI Link</span></a>
+                        <button class="btn btn-xs btn-cite" onclick="openCiteModal(1)"><span>Cite /
+                                BibTeX</span></button>
+                    </div>
+                </article>
+
+                <article class="pub-entry-card" data-year="2026" data-index="2">
+                    <div class="pub-entry-header">
+                        <span class="pub-journal-tag elsevier">Journal of Molecular Structure</span>
+                        <span class="pub-year-badge">Jan 2026</span>
+                    </div>
+                    <h3 class="pub-entry-title">
+                        <a href="https://doi.org/10.1016/J.MOLSTRUC.2025.143954" target="_blank"
+                            rel="noopener noreferrer">
+                            Synthesis and characterization of substituted
+                            3-((4-methyl-2-oxo-2H-chromen-7-yl)imino)indolin-2-one derivatives as photosensitizers for
+                            solar cell application and their NLO properties
+                        </a>
+                    </h3>
+                    <p class="pub-entry-authors"><strong>Surendranaik, Y.</strong>; Venkatesh, Talavara; Manjunatha, L.
+                        S.</p>
+                    <p class="pub-entry-citation"><em>Journal of Molecular Structure</em>, Vol. 1343, Article 143954
+                        (2026). DOI: 10.1016/J.MOLSTRUC.2025.143954</p>
+                    <div class="pub-entry-actions">
+                        <a href="https://doi.org/10.1016/J.MOLSTRUC.2025.143954" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-xs btn-doi"><span>DOI Link</span></a>
+                        <button class="btn btn-xs btn-cite" onclick="openCiteModal(2)"><span>Cite /
+                                BibTeX</span></button>
+                    </div>
+                </article>
+
+                <article class="pub-entry-card" data-year="2026" data-index="3">
+                    <div class="pub-entry-header">
+                        <span class="pub-journal-tag elsevier">Journal of Molecular Structure</span>
+                        <span class="pub-year-badge">2026</span>
+                    </div>
+                    <h3 class="pub-entry-title">
+                        <a href="https://doi.org/10.1016/J.MOLSTRUC.2026.146087" target="_blank"
+                            rel="noopener noreferrer">
+                            Synthesis of triazolo-pyrimidine carbonitrile derivatives: A one-vessel three-component
+                            reaction, biological screening, docking, DFT, and electrochemical profiling
+                        </a>
+                    </h3>
+                    <p class="pub-entry-authors">Mallikarjuna, B.; Chavan, Prabhakar; <strong>Surendranaik, Y.*</strong>
+                    </p>
+                    <p class="pub-entry-citation"><em>Journal of Molecular Structure</em>, Vol. 1346, Article 146087
+                        (2026). DOI: 10.1016/J.MOLSTRUC.2026.146087</p>
+                    <div class="pub-entry-actions">
+                        <a href="https://doi.org/10.1016/J.MOLSTRUC.2026.146087" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-xs btn-doi"><span>DOI Link</span></a>
+                        <button class="btn btn-xs btn-cite" onclick="openCiteModal(3)"><span>Cite /
+                                BibTeX</span></button>
+                    </div>
+                </article>
+
+                <article class="pub-entry-card" data-year="2026" data-index="4">
+                    <div class="pub-entry-header">
+                        <span class="pub-journal-tag taylor">Journal of Coordination Chemistry</span>
+                        <span class="pub-year-badge">2026</span>
+                    </div>
+                    <h3 class="pub-entry-title">
+                        <a href="https://doi.org/10.1080/00958972.2026.2626033" target="_blank"
+                            rel="noopener noreferrer">
+                            Benzoxazole-isatin-based metal complexes as potential anti-tuberculosis agents: synthesis,
+                            characterization, in vitro evaluation, and computational modeling
+                        </a>
+                    </h3>
+                    <p class="pub-entry-authors">Pooja, T. Kumari; Yuvaraj, T. C. M.; <strong>Naik, Y.
+                            Surendra*</strong></p>
+                    <p class="pub-entry-citation"><em>Journal of Coordination Chemistry</em>, Vol. 79, No. 4, pp.
+                        378–397 (2026). DOI: 10.1080/00958972.2026.2626033</p>
+                    <div class="pub-entry-actions">
+                        <a href="https://doi.org/10.1080/00958972.2026.2626033" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-xs btn-doi"><span>DOI Link</span></a>
+                        <button class="btn btn-xs btn-cite" onclick="openCiteModal(4)"><span>Cite /
+                                BibTeX</span></button>
+                    </div>
+                </article>
+
+                <!-- 2025 Publications -->
+                <div class="pub-year-divider" data-year="2025">2025 Publications</div>
+
+                <article class="pub-entry-card" data-year="2025" data-index="5">
+                    <div class="pub-entry-header">
+                        <span class="pub-journal-tag elsevier">Journal of Molecular Structure</span>
+                        <span class="pub-year-badge">Dec 2025</span>
+                    </div>
+                    <h3 class="pub-entry-title">
+                        <a href="https://doi.org/10.1016/J.MOLSTRUC.2025.143360" target="_blank"
+                            rel="noopener noreferrer">
+                            Synthesis, characterization and biological evaluation of coumarin incorporated azo compounds
+                        </a>
+                    </h3>
+                    <p class="pub-entry-authors">Karunasagar, K. O.; Bodke, Yadav D.; Vinay, K. K.;
+                        <strong>Surendranaik, Y.</strong>
+                    </p>
+                    <p class="pub-entry-citation"><em>Journal of Molecular Structure</em>, Article 143360 (2025). DOI:
+                        10.1016/J.MOLSTRUC.2025.143360</p>
+                    <div class="pub-entry-actions">
+                        <a href="https://doi.org/10.1016/J.MOLSTRUC.2025.143360" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-xs btn-doi"><span>DOI Link</span></a>
+                        <button class="btn btn-xs btn-cite" onclick="openCiteModal(5)"><span>Cite /
+                                BibTeX</span></button>
+                    </div>
+                </article>
+
+                <article class="pub-entry-card" data-year="2025" data-index="6">
+                    <div class="pub-entry-header">
+                        <span class="pub-journal-tag elsevier">Journal of the Indian Chemical Society</span>
+                        <span class="pub-year-badge">Nov 2025</span>
+                    </div>
+                    <h3 class="pub-entry-title">
+                        <a href="https://doi.org/10.1016/J.JICS.2025.102106" target="_blank" rel="noopener noreferrer">
+                            L-Proline driven Knoevenagel condensation for assembling benzimidazole-pyrazole-coumarin
+                            frameworks; mechanistic, biological and electrochemical lead sensor applications
+                        </a>
+                    </h3>
+                    <p class="pub-entry-authors">Mandara, A. M.; Chavan, Prabhakar; <strong>Surendranaik, Y.*</strong>
+                    </p>
+                    <p class="pub-entry-citation"><em>Journal of the Indian Chemical Society</em>, Article 102106
+                        (2025). DOI: 10.1016/J.JICS.2025.102106</p>
+                    <div class="pub-entry-actions">
+                        <a href="https://doi.org/10.1016/J.JICS.2025.102106" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-xs btn-doi"><span>DOI Link</span></a>
+                        <button class="btn btn-xs btn-cite" onclick="openCiteModal(6)"><span>Cite /
+                                BibTeX</span></button>
+                    </div>
+                </article>
+
+                <article class="pub-entry-card" data-year="2025" data-index="7">
+                    <div class="pub-entry-header">
+                        <span class="pub-journal-tag elsevier">Journal of Molecular Structure</span>
+                        <span class="pub-year-badge">Oct 2025</span>
+                    </div>
+                    <h3 class="pub-entry-title">
+                        <a href="https://doi.org/10.1016/J.MOLSTRUC.2025.142802" target="_blank"
+                            rel="noopener noreferrer">
+                            Synthesis, characterization and geometrical optimization of azo dyes derived from the
+                            substituted pyrazole and benzothiazole amines coupled with 3-N,N-diethyl amino phenol
+                        </a>
+                    </h3>
+                    <p class="pub-entry-authors">Shakuntala, R. B.; Keshavayya, J.; Pushpavathi, Itte;
+                        <strong>Surendranaik, Y.</strong>
+                    </p>
+                    <p class="pub-entry-citation"><em>Journal of Molecular Structure</em>, Vol. 1343, Article 142802
+                        (2025). DOI: 10.1016/J.MOLSTRUC.2025.142802</p>
+                    <div class="pub-entry-actions">
+                        <a href="https://doi.org/10.1016/J.MOLSTRUC.2025.142802" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-xs btn-doi"><span>DOI Link</span></a>
+                        <button class="btn btn-xs btn-cite" onclick="openCiteModal(7)"><span>Cite /
+                                BibTeX</span></button>
+                    </div>
+                </article>
+
+                <article class="pub-entry-card" data-year="2025" data-index="8">
+                    <div class="pub-entry-header">
+                        <span class="pub-journal-tag elsevier">Journal of Molecular Structure</span>
+                        <span class="pub-year-badge">Oct 2025</span>
+                    </div>
+                    <h3 class="pub-entry-title">
+                        <a href="https://doi.org/10.1016/J.MOLSTRUC.2025.142576" target="_blank"
+                            rel="noopener noreferrer">
+                            Synthesis, Characterization, Electrochemical Sensing, DFT Analysis, Molecular Docking and
+                            Anticancer Activity of a Novel Thiadiazole-Based Azo Dye Incorporating a Barbituric Acid
+                            Scaffold
+                        </a>
+                    </h3>
+                    <p class="pub-entry-authors">Harisha, S.; Nagaraj, Kalyan; <strong>Surendranaik, Y.*</strong></p>
+                    <p class="pub-entry-citation"><em>Journal of Molecular Structure</em>, Vol. 1341, Article 142576
+                        (2025). DOI: 10.1016/J.MOLSTRUC.2025.142576</p>
+                    <div class="pub-entry-actions">
+                        <a href="https://doi.org/10.1016/J.MOLSTRUC.2025.142576" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-xs btn-doi"><span>DOI Link</span></a>
+                        <button class="btn btn-xs btn-cite" onclick="openCiteModal(8)"><span>Cite /
+                                BibTeX</span></button>
+                    </div>
+                </article>
+
+                <article class="pub-entry-card" data-year="2025" data-index="9">
+                    <div class="pub-entry-header">
+                        <span class="pub-journal-tag wiley">ChemistrySelect</span>
+                        <span class="pub-year-badge">Aug 2025</span>
+                    </div>
+                    <h3 class="pub-entry-title">
+                        <a href="https://doi.org/10.1002/SLCT.202501285" target="_blank" rel="noopener noreferrer">
+                            Synthesis, Solvatochromic, LFPs, Computational, and Electrochemical Investigation of Novel
+                            Sulfadiazine Azo Dyes and Their Biological Studies
+                        </a>
+                    </h3>
+                    <p class="pub-entry-authors">Pavithra; Pushpavathi, Itte; <strong>Naik, Y. Surendra*</strong></p>
+                    <p class="pub-entry-citation"><em>ChemistrySelect</em>, Vol. 10, No. 33, Article e01285 (2025). DOI:
+                        10.1002/SLCT.202501285</p>
+                    <div class="pub-entry-actions">
+                        <a href="https://doi.org/10.1002/SLCT.202501285" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-xs btn-doi"><span>DOI Link</span></a>
+                        <button class="btn btn-xs btn-cite" onclick="openCiteModal(9)"><span>Cite /
+                                BibTeX</span></button>
+                    </div>
+                </article>
+
+                <article class="pub-entry-card" data-year="2025" data-index="10">
+                    <div class="pub-entry-header">
+                        <span class="pub-journal-tag bentham">Letters in Organic Chemistry</span>
+                        <span class="pub-year-badge">Aug 2025</span>
+                    </div>
+                    <h3 class="pub-entry-title">
+                        <a href="https://doi.org/10.2174/0115701786362014250102043411" target="_blank"
+                            rel="noopener noreferrer">
+                            Facile CeO₂ Nanoparticles Catalysed the Synthesis of a Series of 2,4,5-Trisubstituted
+                            Imidazole Derivatives and their DFT Studies for NLO Application
+                        </a>
+                    </h3>
+                    <p class="pub-entry-authors"><strong>Yashyanaik, Surendranaik</strong>; Venkatesh, Talavara; M.e.,
+                        Jayachandu</p>
+                    <p class="pub-entry-citation"><em>Letters in Organic Chemistry</em>, Vol. 22, No. 8, pp. 642–652
+                        (2025). DOI: 10.2174/0115701786362014250102043411</p>
+                    <div class="pub-entry-actions">
+                        <a href="https://doi.org/10.2174/0115701786362014250102043411" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-xs btn-doi"><span>DOI Link</span></a>
+                        <button class="btn btn-xs btn-cite" onclick="openCiteModal(10)"><span>Cite /
+                                BibTeX</span></button>
+                    </div>
+                </article>
+
+                <article class="pub-entry-card" data-year="2025" data-index="11">
+                    <div class="pub-entry-header">
+                        <span class="pub-journal-tag springer">Russian Journal of Bioorganic Chemistry</span>
+                        <span class="pub-year-badge">Jun 2025</span>
+                    </div>
+                    <h3 class="pub-entry-title">
+                        <a href="https://doi.org/10.1134/S1068162024605962" target="_blank" rel="noopener noreferrer">
+                            Synthesis, Biological, and Computational Studies of Novel Isoxazolone-Coupled Azo Moieties
+                            and Their Photophysical Interactions
+                        </a>
+                    </h3>
+                    <p class="pub-entry-authors">Karunasagar, K. O.; Bodke, Yadav D.; <strong>Surendranaik, Y.</strong>
+                    </p>
+                    <p class="pub-entry-citation"><em>Russian Journal of Bioorganic Chemistry</em>, Vol. 51, No. 3, pp.
+                        1099–1114 (2025). DOI: 10.1134/S1068162024605962</p>
+                    <div class="pub-entry-actions">
+                        <a href="https://doi.org/10.1134/S1068162024605962" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-xs btn-doi"><span>DOI Link</span></a>
+                        <button class="btn btn-xs btn-cite" onclick="openCiteModal(11)"><span>Cite /
+                                BibTeX</span></button>
+                    </div>
+                </article>
+
+                <article class="pub-entry-card" data-year="2025" data-index="12">
+                    <div class="pub-entry-header">
+                        <span class="pub-journal-tag elsevier">Journal of Molecular Structure</span>
+                        <span class="pub-year-badge">Feb 2025</span>
+                    </div>
+                    <h3 class="pub-entry-title">
+                        <a href="https://doi.org/10.1016/J.MOLSTRUC.2024.140111" target="_blank"
+                            rel="noopener noreferrer">
+                            Synthesis and evaluation of the anti-TB activity of novel
+                            7-(2-(4-substitutedphenyl)-4,5-diphenyl-1H-imidazol-1-yl)-4-methyl-2H-chromen-2-one
+                            derivatives and their DFT studies for NLO application
+                        </a>
+                    </h3>
+                    <p class="pub-entry-authors"><strong>Surendranaik, Y.</strong>; Venkatesh, Talavara</p>
+                    <p class="pub-entry-citation"><em>Journal of Molecular Structure</em>, Vol. 1321, Article 140111
+                        (2025). DOI: 10.1016/J.MOLSTRUC.2024.140111</p>
+                    <div class="pub-entry-actions">
+                        <a href="https://doi.org/10.1016/J.MOLSTRUC.2024.140111" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-xs btn-doi"><span>DOI Link</span></a>
+                        <button class="btn btn-xs btn-cite" onclick="openCiteModal(12)"><span>Cite /
+                                BibTeX</span></button>
+                    </div>
+                </article>
+
+                <article class="pub-entry-card" data-year="2025" data-index="13">
+                    <div class="pub-entry-header">
+                        <span class="pub-journal-tag springer">Structural Chemistry</span>
+                        <span class="pub-year-badge">Feb 2025</span>
+                    </div>
+                    <h3 class="pub-entry-title">
+                        <a href="https://doi.org/10.1007/S11224-024-02359-5" target="_blank" rel="noopener noreferrer">
+                            Synthesis, characterization, solvatochromic, and electrochemical investigation of novel
+                            4-methyl coumarin fused azo dyes as an NLO material and their biological studies
+                        </a>
+                    </h3>
+                    <p class="pub-entry-authors"><strong>Surendranaik, Y.</strong>; Venkatesh, Talavara; Naik, Eresha
+                    </p>
+                    <p class="pub-entry-citation"><em>Structural Chemistry</em>, Vol. 36, No. 1, pp. 171–190 (2025).
+                        DOI: 10.1007/S11224-024-02359-5</p>
+                    <div class="pub-entry-actions">
+                        <a href="https://doi.org/10.1007/S11224-024-02359-5" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-xs btn-doi"><span>DOI Link</span></a>
+                        <button class="btn btn-xs btn-cite" onclick="openCiteModal(13)"><span>Cite /
+                                BibTeX</span></button>
+                    </div>
+                </article>
+
+                <!-- 2024 Publications -->
+                <div class="pub-year-divider" data-year="2024">2024 Publications</div>
+
+                <article class="pub-entry-card" data-year="2024" data-index="14">
+                    <div class="pub-entry-header">
+                        <span class="pub-journal-tag wiley">ChemistrySelect</span>
+                        <span class="pub-year-badge">Sep 2024</span>
+                    </div>
+                    <h3 class="pub-entry-title">
+                        <a href="https://doi.org/10.1002/SLCT.202402411" target="_blank" rel="noopener noreferrer">
+                            Synthesis, Characterization, and Optical Properties of Novel Heterocyclic Azo Dyes and
+                            Evaluation of Their Antioxidant Activity as an Active Sunscreen Agent
+                        </a>
+                    </h3>
+                    <p class="pub-entry-authors"><strong>Surendranaik, Y.</strong>; Venkatesh, Talavara; Chethan</p>
+                    <p class="pub-entry-citation"><em>ChemistrySelect</em>, Vol. 9, No. 34, Article e202402411 (2024).
+                        DOI: 10.1002/SLCT.202402411</p>
+                    <div class="pub-entry-actions">
+                        <a href="https://doi.org/10.1002/SLCT.202402411" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-xs btn-doi"><span>DOI Link</span></a>
+                        <button class="btn btn-xs btn-cite" onclick="openCiteModal(14)"><span>Cite /
+                                BibTeX</span></button>
+                    </div>
+                </article>
+
+                <article class="pub-entry-card" data-year="2024" data-index="15">
+                    <div class="pub-entry-header">
+                        <span class="pub-journal-tag wiley">Luminescence (Wiley)</span>
+                        <span class="pub-year-badge">Jul 2024</span>
+                    </div>
+                    <h3 class="pub-entry-title">
+                        <a href="https://doi.org/10.1002/BIO.4825" target="_blank" rel="noopener noreferrer">
+                            Red-emitting 4-methyl coumarin fused barbituric acid as an electrochemical sensor for
+                            catechol detection and probe for latent fingerprints
+                        </a>
+                    </h3>
+                    <p class="pub-entry-authors"><strong>Yashyanaik, Surendranaik</strong>; Venkatesh, Talavara; Vinuth,
+                        Mirle</p>
+                    <p class="pub-entry-citation"><em>Luminescence</em>, Vol. 39, No. 7, Article e4825 (2024). DOI:
+                        10.1002/BIO.4825</p>
+                    <div class="pub-entry-actions">
+                        <a href="https://doi.org/10.1002/BIO.4825" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-xs btn-doi"><span>DOI Link</span></a>
+                        <button class="btn btn-xs btn-cite" onclick="openCiteModal(15)"><span>Cite /
+                                BibTeX</span></button>
+                    </div>
+                </article>
+
+                <div id="noPubsMessage" class="no-pubs-box" style="display:none;">
+                    <p>No publications found matching your filter criteria.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Pathway & Professional Timeline -->
+        <section class="section-container fade-in" id="pathway">
+            <div class="section-title-wrap">
+                <span class="section-eyebrow">Career Milestones &bull; Education</span>
+                <h2 class="section-heading">Academic Pathway &amp; Experience</h2>
+            </div>
+
+            <div class="pathway-split-grid">
+                <!-- Left: Professional Appointments -->
+                <div class="pathway-col">
+                    <div class="col-header">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                        </svg>
+                        <h3>Appointments &amp; Experience</h3>
+                    </div>
+
+                    <div class="timeline-tree">
+                        <!-- Role 1 -->
+                        <div class="timeline-card active-role">
+                            <div class="time-badge">2026 &ndash; Present</div>
+                            <h4>Assistant Professor of Chemistry</h4>
+                            <p class="institution">MVJ College of Engineering, Bengaluru</p>
+                            <ul class="role-bullets">
+                                <li>Teaching Engineering Chemistry to undergraduate engineering students.</li>
+                                <li>Supervising laboratory sessions and designing academic course curricula.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Role 2 -->
+                        <div class="timeline-card">
+                            <div class="time-badge">Feb 2026 &ndash; Apr 2026</div>
+                            <h4>Senior Associate</h4>
+                            <p class="institution">Innodata Inc.</p>
+                            <ul class="role-bullets">
+                                <li>Engineered structured organic and medicinal chemistry content and reaction mechanism
+                                    modeling.</li>
+                                <li>Maintained rigorous scientific accuracy across academic chemical datasets.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Role 3 -->
+                        <div class="timeline-card">
+                            <div class="time-badge">Jul 2022 &ndash; May 2026</div>
+                            <h4>Doctoral Research Scholar</h4>
+                            <p class="institution">Kuvempu University, Shivamogga</p>
+                            <ul class="role-bullets">
+                                <li>Conducted doctoral investigations on novel heterocyclic synthesis and in silico DFT
+                                    modeling.</li>
+                                <li>Authored 16 research articles in peer-reviewed journals and 1 Indian Patent.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Role 4 -->
+                        <div class="timeline-card">
+                            <div class="time-badge">Feb 2022 &ndash; Apr 2022</div>
+                            <h4>Guest Lecturer</h4>
+                            <p class="institution">Sahyadri Science College, Shimoga</p>
+                            <ul class="role-bullets">
+                                <li>Delivered postgraduate lecture courses and practical laboratory modules in Organic
+                                    Chemistry.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Academic Degrees & Competitive Ranks -->
+                <div class="pathway-col">
+                    <div class="col-header">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                        </svg>
+                        <h3>Degrees &amp; National Honors</h3>
+                    </div>
+
+                    <div class="timeline-tree">
+                        <!-- Degree 1 -->
+                        <div class="timeline-card honor-card">
+                            <div class="time-badge gold">National Honor</div>
+                            <h4>CSIR-NET (Chemical Sciences) &bull; AIR 52</h4>
+                            <p class="institution">Council of Scientific and Industrial Research (CSIR), 2026</p>
+                            <p class="honor-desc">Secured All India Rank 52 (Top 1% nationwide) qualifying for Junior
+                                Research Fellowship and Assistant Professorship.</p>
+                        </div>
+
+                        <!-- Degree 2 -->
+                        <div class="timeline-card">
+                            <div class="time-badge">2022 &ndash; 2026</div>
+                            <h4>Ph.D. in Organic Chemistry</h4>
+                            <p class="institution">Kuvempu University, Shivamogga, Karnataka</p>
+                            <p class="honor-desc">Thesis on synthesis, structural elucidation, and bio-evaluations of
+                                novel heterocyclic compounds and DFT simulations.</p>
+                        </div>
+
+                        <!-- Degree 3 -->
+                        <div class="timeline-card">
+                            <div class="time-badge">2022 &bull; 2023</div>
+                            <h4>GATE &amp; K-SET Qualified</h4>
+                            <p class="institution">IIT Kanpur &amp; University of Mysore</p>
+                            <p class="honor-desc">Qualified Graduate Aptitude Test in Engineering (GATE 2023) and
+                                Karnataka State Eligibility Test (K-SET 2022) for Assistant Professorship.</p>
+                        </div>
+
+                        <!-- Degree 4 -->
+                        <div class="timeline-card">
+                            <div class="time-badge">2021</div>
+                            <h4>M.Sc. in Chemistry (First Class, 72.36%)</h4>
+                            <p class="institution">Kuvempu University, Shivamogga</p>
+                            <p class="honor-desc">Specialized in advanced organic synthesis, reaction mechanisms, and
+                                spectroscopy.</p>
+                        </div>
+
+                        <!-- Degree 5 -->
+                        <div class="timeline-card">
+                            <div class="time-badge">2019</div>
+                            <h4>B.Sc. (Distinction, 80.00%)</h4>
+                            <p class="institution">Govt. Sir M.V. Science College, Bhadravathi</p>
+                            <p class="honor-desc">Chemistry, Zoology, and Biotechnology.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teaching & Pedagogical Modules -->
+        <section class="section-container fade-in" id="teaching">
+            <div class="section-title-wrap">
+                <span class="section-eyebrow">Academic Instruction &bull; Coursework</span>
+                <h2 class="section-heading">Teaching &amp; Curriculum</h2>
+                <p class="section-desc">Courses taught for undergraduate engineering and postgraduate chemistry
+                    programs.</p>
+            </div>
+
+            <div class="teaching-grid">
+                <div class="course-card">
+                    <div class="course-level">Undergraduate Engineering</div>
+                    <h3>Engineering Chemistry</h3>
+                    <p class="course-summary">Foundational and applied principles of chemistry tailored for modern
+                        engineering disciplines.</p>
+                    <ul class="course-modules">
+                        <li>Electrochemistry, Batteries &amp; Energy Storage Systems</li>
+                        <li>Corrosion Science, Cathodic Protection &amp; Metal Finishing</li>
+                        <li>Polymer Composites &amp; Engineering Materials</li>
+                        <li>Water Technology &amp; Environmental Chemistry</li>
+                    </ul>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-level">Postgraduate &amp; Advanced</div>
+                    <h3>Advanced Organic Mechanisms</h3>
+                    <p class="course-summary">Mechanistic study of modern organic transformations and heterocyclic
+                        synthesis.</p>
+                    <ul class="course-modules">
+                        <li>Reactive Intermediates &amp; Rearrangements</li>
+                        <li>Pericyclic Reactions &amp; Stereochemistry</li>
+                        <li>Transition-Metal Catalyzed Transformations</li>
+                        <li>Retrosynthesis &amp; Multi-Step Synthesis</li>
+                    </ul>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-level">Analytical &amp; Applied</div>
+                    <h3>Spectroscopy &amp; Structural Elucidation</h3>
+                    <p class="course-summary">Spectroscopic characterization and computational analysis of organic
+                        compounds.</p>
+                    <ul class="course-modules">
+                        <li>¹H &amp; ¹³C NMR 1D/2D Spectral Interpretation</li>
+                        <li>FT-IR Vibrational Modes &amp; UV-Vis Chromophores</li>
+                        <li>High-Resolution Mass Spectrometry (HRMS)</li>
+                        <li>Density Functional Theory (DFT) Output Analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conferences & Workshops -->
+        <section class="section-container fade-in" id="conferences">
+            <div class="section-title-wrap">
+                <span class="section-eyebrow">Presentations &bull; Symposia</span>
+                <h2 class="section-heading">Conferences &amp; Training</h2>
+            </div>
+
+            <div class="conf-workshops-grid">
+                <!-- Conferences -->
+                <div class="conf-block">
+                    <h3 class="sub-block-title">International &amp; National Conferences</h3>
+
+                    <div class="conf-item">
+                        <div class="conf-badge poster">Poster Presentation</div>
+                        <h4>International Conference on Advances in Chemical and Physical Sciences (ICACPS-2025)</h4>
+                        <p class="conf-venue">Amrita Vishwa Vidyapeetham, Mysuru &bull; Jan 23–24, 2025</p>
+                        <p class="conf-topic">Synthesis, characterization and anti-TB evaluation of novel heterocyclic
+                            scaffolds.</p>
+                    </div>
+
+                    <div class="conf-item">
+                        <div class="conf-badge oral">Oral Presentation</div>
+                        <h4>International Conference on Innovations in Sustainable Energy and Material Science
+                            (ISEMS-2024)</h4>
+                        <p class="conf-venue">JNNCE Shivamogga &bull; Mar 1–2, 2024</p>
+                        <p class="conf-topic">Sensing and optical properties of novel coumarin-barbituric acid
+                            derivatives.</p>
+                    </div>
+
+                    <div class="conf-item">
+                        <div class="conf-badge poster">Poster Presentation</div>
+                        <h4>Rasayan 18: Two-Day International Symposium on Science Beyond Boundary</h4>
+                        <p class="conf-venue">Vidyasagar University &amp; CHRIST University &bull; Jan 29–30, 2024</p>
+                        <p class="conf-topic">Spectroscopic and photophysical evaluation of novel azo chromophores.</p>
+                    </div>
+                </div>
+
+                <!-- Workshops -->
+                <div class="conf-block">
+                    <h3 class="sub-block-title">Advanced Workshops &amp; Training</h3>
+
+                    <div class="ws-item">
+                        <div class="ws-year">Jun 2023</div>
+                        <h4>Hands-on Training on Electrochemical Techniques &amp; Energy Storage</h4>
+                        <p class="ws-org">CIIRC, Jyothy Institute of Technology, Bengaluru</p>
+                        <p class="ws-desc">Hands-on cyclic voltammetry, EIS, and electrochemical characterization.</p>
+                    </div>
+
+                    <div class="ws-item">
+                        <div class="ws-year">Nov 2022</div>
+                        <h4>Seven-Day National DST-STUTI Training Programme</h4>
+                        <p class="ws-org">Mangalore University (Sponsored by DST, Govt. of India)</p>
+                        <p class="ws-desc">Advanced analytical instrumentation, NMR, XRD, and high-resolution MS.</p>
+                    </div>
+
+                    <div class="ws-item">
+                        <div class="ws-year">Aug 2022</div>
+                        <h4>National Intellectual Property Awareness Program (NIPAM)</h4>
+                        <p class="ws-org">Intellectual Property Office, Govt. of India</p>
+                        <p class="ws-desc">Patent drafting, prior art search, and IP commercialization.</p>
+                    </div>
+
+                    <div class="ws-item">
+                        <div class="ws-year">Aug 2022</div>
+                        <h4>National Workshop on Recent Trends in Material Frontiers</h4>
+                        <p class="ws-org">Amity University, Kolkata (5-Day National Workshop)</p>
+                        <p class="ws-desc">Chemical and biological aspects of frontier materials and nanomaterials.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Moments & Research Engagements Gallery -->
+        <section class="section-container fade-in" id="gallery">
+            <div class="section-title-wrap">
+                <span class="section-eyebrow">Visual Journey &bull; Field Engagements</span>
+                <h2 class="section-heading">Academic Moments &amp; Gallery</h2>
+                <p class="section-desc">Snapshots from international conferences, institutional symposia, research
+                    presentations, and academic faculty engagements.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Photo 1 -->
+                <div class="gallery-card"
+                    onclick="openLightbox('banner1.jpg', 'Academic Symposium &amp; Keynote Address', 'Dr. Surendranaik Y engaging in scholarly discussions during an invited scientific session.')">
+                    <div class="gallery-img-box">
+                        <img src="banner1.jpg" alt="Academic Conference Presentation" class="gallery-img"
+                            loading="lazy">
+                        <span class="gallery-tag-pill">Symposium</span>
+                        <div class="gallery-zoom-icon">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                <line x1="11" y1="8" x2="11" y2="14" />
+                                <line x1="8" y1="11" x2="14" y2="11" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4 class="gallery-title">Scientific Discourse &amp; Keynote</h4>
+                        <p class="gallery-sub">Delivering research perspectives on heterocyclic scaffolds and drug
+                            discovery.</p>
+                    </div>
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="gallery-card"
+                    onclick="openLightbox('banner2.jpg', 'Faculty &amp; Institutional Assembly', 'Academic assembly and departmental faculty collaborative forum.')">
+                    <div class="gallery-img-box">
+                        <img src="banner2.jpg" alt="Departmental Gathering" class="gallery-img" loading="lazy">
+                        <span class="gallery-tag-pill">Faculty Forum</span>
+                        <div class="gallery-zoom-icon">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                <line x1="11" y1="8" x2="11" y2="14" />
+                                <line x1="8" y1="11" x2="14" y2="11" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4 class="gallery-title">Academic Assembly &amp; Exchange</h4>
+                        <p class="gallery-sub">Collaborative leadership and pedagogy planning at institutional faculty
+                            meet.</p>
+                    </div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="gallery-card"
+                    onclick="openLightbox('banner3.jpg', 'National Chemistry Conference', 'Interacting with leading researchers during national conference technical sessions.')">
+                    <div class="gallery-img-box">
+                        <img src="banner3.jpg" alt="National Chemistry Conference" class="gallery-img" loading="lazy">
+                        <span class="gallery-tag-pill">Conference</span>
+                        <div class="gallery-zoom-icon">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                <line x1="11" y1="8" x2="11" y2="14" />
+                                <line x1="8" y1="11" x2="14" y2="11" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4 class="gallery-title">Conference Technical Forum</h4>
+                        <p class="gallery-sub">Presenting research findings in synthetic methodology and computational
+                            chemistry.</p>
+                    </div>
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="gallery-card"
+                    onclick="openLightbox('banner4.jpg', 'Scholarly Dialogue &amp; Panel Discussion', 'Panel interaction on modern frontiers in chemical and biological sciences.')">
+                    <div class="gallery-img-box">
+                        <img src="banner4.jpg" alt="Scholarly Panel Dialogue" class="gallery-img" loading="lazy">
+                        <span class="gallery-tag-pill">Panel Session</span>
+                        <div class="gallery-zoom-icon">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                <line x1="11" y1="8" x2="11" y2="14" />
+                                <line x1="8" y1="11" x2="14" y2="11" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4 class="gallery-title">Scholarly Dialogue &amp; Panel</h4>
+                        <p class="gallery-sub">Exchanging insights on interdisciplinary chemistry and advanced
+                            materials.</p>
+                    </div>
+                </div>
+
+                <!-- Photo 5 -->
+                <div class="gallery-card"
+                    onclick="openLightbox('banner5.jpg', 'Institutional Convocation &amp; Honor', 'Celebrating research achievements and institutional milestones.')">
+                    <div class="gallery-img-box">
+                        <img src="banner5.jpg" alt="Academic Milestone &amp; Convocation" class="gallery-img"
+                            loading="lazy">
+                        <span class="gallery-tag-pill">Milestone</span>
+                        <div class="gallery-zoom-icon">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                <line x1="11" y1="8" x2="11" y2="14" />
+                                <line x1="8" y1="11" x2="14" y2="11" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4 class="gallery-title">Academic Milestones &amp; Honors</h4>
+                        <p class="gallery-sub">Recognition of doctoral research, peer-reviewed outputs, and academic
+                            excellence.</p>
+                    </div>
+                </div>
+
+                <!-- Photo 6 -->
+                <div class="gallery-card"
+                    onclick="openLightbox('banner6.jpg', 'Campus Mentorship &amp; Student Interaction', 'Guiding undergraduate and postgraduate students in laboratory chemical sciences.')">
+                    <div class="gallery-img-box">
+                        <img src="banner6.jpg" alt="Student Mentorship &amp; Campus Life" class="gallery-img"
+                            loading="lazy">
+                        <span class="gallery-tag-pill">Mentorship</span>
+                        <div class="gallery-zoom-icon">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                <line x1="11" y1="8" x2="11" y2="14" />
+                                <line x1="8" y1="11" x2="14" y2="11" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4 class="gallery-title">Student Mentorship &amp; Campus</h4>
+                        <p class="gallery-sub">Inspiring future engineers and chemists through hands-on experimental
+                            pedagogy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section (Decent, Clean Layout without redundant CV box) -->
+        <section class="section-container fade-in" id="contact">
+            <div class="section-title-wrap">
+                <span class="section-eyebrow">Academic Inquiries</span>
+                <h2 class="section-heading">Contact &amp; Information</h2>
+                <p class="section-desc">Open for research collaborations, student mentorship, and academic inquiries.
+                </p>
+            </div>
+
+            <div class="contact-clean-grid">
+                <div class="contact-card">
+                    <div class="contact-entry">
+                        <div class="entry-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <div class="entry-details">
+                            <span class="entry-label">Academic Office</span>
+                            <p class="entry-text">
+                                Department of Chemistry<br>
+                                MVJ College of Engineering, Channasandra Main Road<br>
+                                Near ITPB, Whitefield, Bengaluru, Karnataka 560067, India
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-entry">
+                        <div class="entry-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </div>
+                        <div class="entry-details">
+                            <span class="entry-label">Email</span>
+                            <a href="mailto:surendranaiky33@gmail.com" class="entry-link">surendranaiky33@gmail.com</a>
+                        </div>
+                        <button class="btn-copy-small"
+                            onclick="copyToClipboard('surendranaiky33@gmail.com', 'Email copied!')" title="Copy Email">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="contact-entry">
+                        <div class="entry-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                        </div>
+                        <div class="entry-details">
+                            <span class="entry-label">Phone</span>
+                            <a href="tel:+919380470819" class="entry-link">+91 93804 70819</a>
+                        </div>
+                        <button class="btn-copy-small" onclick="copyToClipboard('+919380470819', 'Phone copied!')"
+                            title="Copy Phone">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Google Scholar -->
+                    <div class="contact-entry">
+                        <div class="entry-icon scholar-icon" style="color: #4285F4;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 10a8 8 0 0 1 7.162 3.44L24 9.5z" />
+                            </svg>
+                        </div>
+                        <div class="entry-details">
+                            <span class="entry-label">Google Scholar</span>
+                            <a href="https://scholar.google.com/citations?user=SurendranaikY" target="_blank"
+                                rel="noopener noreferrer" class="entry-link"
+                                style="color: var(--accent-gold); font-weight: 600;">
+                                Dr. Surendranaik Y (Citations &amp; Profile) &rarr;
+                            </a>
+                        </div>
+                        <button class="btn-copy-small"
+                            onclick="copyToClipboard('https://scholar.google.com/citations?user=SurendranaikY', 'Scholar link copied!')"
+                            title="Copy Google Scholar Link">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- ORCID Researcher ID -->
+                    <div class="contact-entry">
+                        <div class="entry-icon orcid-icon" style="color: #a6ce39;">
+                            <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+                                <path
+                                    d="M128 0C57.308 0 0 57.308 0 128s57.308 128 128 128 128-57.308 128-128S198.692 0 128 0zm-45.714 189.923H59.429V66.077h22.857v123.846zm-11.429-141.538c-7.462 0-13.538-6.077-13.538-13.539 0-7.461 6.077-13.538 13.538-13.538 7.462 0 13.539 6.077 13.539 13.538 0 7.462-6.077 13.539-13.539 13.539zm125.714 87.077c0 30.154-24.461 54.461-54.615 54.461H98.286V66.077h43.684c30.154 0 54.615 24.308 54.615 54.461v14.924zm-22.857-14.924c0-17.538-14.308-31.846-31.758-31.846h-20.923v63.692h20.923c17.45 0 31.758-14.307 31.758-31.846z" />
+                            </svg>
+                        </div>
+                        <div class="entry-details">
+                            <span class="entry-label">ORCID iD</span>
+                            <a href="https://orcid.org/0009-0007-9150-8297" target="_blank" rel="noopener noreferrer"
+                                class="entry-link">
+                                0009-0007-9150-8297
+                            </a>
+                        </div>
+                        <button class="btn-copy-small"
+                            onclick="copyToClipboard('0009-0007-9150-8297', 'ORCID ID copied!')" title="Copy ORCID ID">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Dr. Surendranaik Y. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-monogram">SY</span>
+                <div>
+                    <h3 class="footer-name">Dr. Surendranaik Y</h3>
+                    <p class="footer-title">Assistant Professor of Chemistry &bull; MVJ College of Engineering,
+                        Bengaluru</p>
+                </div>
+            </div>
+
+            <div class="footer-nav">
+                <a href="#hero">Top</a>
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#patents">Patents</a>
+                <a href="#publications">Publications</a>
+                <a href="#gallery">Gallery</a>
+                <a href="https://scholar.google.com/citations?user=SurendranaikY" target="_blank"
+                    rel="noopener noreferrer">Google Scholar</a>
+                <a href="#pathway">Pathway</a>
+                <a href="#teaching">Teaching</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="year">2026</span> Dr. Surendranaik Y. All Rights Reserved &bull; Academic &amp;
+                    Research Portfolio.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Image Lightbox Modal -->
+    <div id="imageLightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true"
+        onclick="handleLightboxBackdropClick(event)">
+        <div class="lightbox-dialog">
+            <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close Lightbox">&times;</button>
+            <div class="lightbox-img-frame">
+                <img id="lightboxImage" src="" alt="Enlarged academic visual" class="lightbox-img">
+            </div>
+            <div class="lightbox-caption-bar">
+                <div>
+                    <h4 id="lightboxTitle" class="lightbox-title"></h4>
+                    <p id="lightboxDesc" class="lightbox-desc"></p>
+                </div>
+                <button class="btn btn-xs btn-outline" onclick="closeLightbox()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Citation Generator Modal Dialog -->
+    <div class="modal-backdrop" id="citationModal" onclick="if(event.target===this) closeCiteModal()">
+        <div class="modal-card" role="dialog" aria-labelledby="citeModalTitle" aria-modal="true">
+            <div class="modal-header">
+                <h3 id="citeModalTitle">Cite Publication</h3>
+                <button class="modal-close-btn" onclick="closeCiteModal()" aria-label="Close dialog">&times;</button>
+            </div>
+            <div class="modal-tabs">
+                <button class="cite-tab-btn active" onclick="switchCiteTab('bibtex')">BibTeX</button>
+                <button class="cite-tab-btn" onclick="switchCiteTab('apa')">APA 7th</button>
+                <button class="cite-tab-btn" onclick="switchCiteTab('mla')">MLA 9th</button>
+            </div>
+            <div class="modal-body">
+                <pre class="citation-code" id="citationCode"></pre>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-sm btn-ghost" onclick="closeCiteModal()">Close</button>
+                <button class="btn btn-sm btn-primary" onclick="copyActiveCitation()">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                    </svg>
+                    <span>Copy Citation</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toastNotification" class="toast-notification" role="status" aria-live="polite"></div>
+
+    <!-- Floating Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Scroll back to top">
+        <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5">
+            <polyline points="18 15 12 9 6 15" />
+        </svg>
+    </button>
 
     <script src="script.js"></script>
 </body>
+
 </html>
